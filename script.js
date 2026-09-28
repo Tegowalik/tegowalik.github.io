@@ -34,6 +34,7 @@ const CONFIG = {
       code: "TEGOWALIK",
       displayUrl: "trixbrix.eu/?ref=tegowalik",
       image: "assets/photos/5-nah-960.webp",
+      srcset: "assets/photos/5-nah-960.webp 960w, assets/photos/5-nah-1600.webp 1057w",
       alt: "A LEGO freight train crossing a TrixBrix bridge above a swimming pool",
       cta: "Visit TrixBrix",
       url: "https://trixbrix.eu/?ref=tegowalik"
@@ -344,8 +345,8 @@ function renderPartners() {
     externalLinkAttributes(imageLink, true);
     const image = document.createElement("img");
     image.src = item.image;
-    if (item.image.endsWith("-960.webp")) {
-      image.srcset = item.image + " 960w, " + item.image.replace("-960.webp", "-1600.webp") + " 1600w";
+    if (item.srcset || item.image.endsWith("-960.webp")) {
+      image.srcset = item.srcset || item.image + " 960w, " + item.image.replace("-960.webp", "-1600.webp") + " 1600w";
       image.sizes = "(min-width: 1020px) 33vw, (min-width: 700px) 50vw, 100vw";
     }
     image.alt = item.alt;
