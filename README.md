@@ -12,6 +12,7 @@ All editable page content is in the clearly marked `CONFIG` object at the top of
 - `partners` controls affiliate and discount cards.
 - `projects` controls the featured signature projects.
 - `resources` controls downloadable files, tutorials, and code links.
+- `features` controls verified third-party coverage.
 - `gallery` controls the photo gallery.
 
 An entry is displayed only when it has the required content and, for links, a valid `http://` or `https://` URL. Remove an entry or leave its URL empty to hide it. If all partner or gallery entries are removed, that complete section is hidden.
@@ -32,7 +33,7 @@ Pass filenames after the two directories to process only selected images:
 ./scripts/optimize-images.sh img assets/photos "01.JPG" "2022_16.9.jpg"
 ```
 
-It produces 960 px and 1600 px WebP variants with safe lowercase filenames. After adding images, reference the generated paths in `CONFIG.heroImage` or `CONFIG.gallery`.
+It produces 960 px and 1600 px WebP variants with safe lowercase filenames. After adding images, reference the generated paths in any image-enabled `CONFIG` entry. Filenames ending in `-960.webp` automatically use their matching `-1600.webp` file as a responsive high-resolution source.
 
 For social sharing, replace `assets/share-card.jpg` with another 1200 × 630 image and keep both matching metadata paths in `index.html` aligned if the filename changes.
 

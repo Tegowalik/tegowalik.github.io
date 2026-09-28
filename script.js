@@ -29,22 +29,32 @@ const CONFIG = {
   partners: [
     {
       name: "TrixBrix",
-      description: "Save on all TrixBrix products with the Tegowalik discount code.",
-      discount: "Code TEGOWALIK · 10% off",
-      cta: "Shop with discount",
+      description: "Tracks, switches, and railway parts. The link is affiliate; enter the code separately at checkout for the discount.",
+      discount: "10% off all products",
+      code: "TEGOWALIK",
+      displayUrl: "trixbrix.eu/?ref=tegowalik",
+      image: "assets/photos/5-nah-960.webp",
+      alt: "A LEGO freight train crossing a TrixBrix bridge above a swimming pool",
+      cta: "Visit TrixBrix",
       url: "https://trixbrix.eu/?ref=tegowalik"
     },
     {
       name: "Mould King",
       description: "Save on every product through the Tegowalik partner link.",
       discount: "5% discount",
-      cta: "Shop with discount",
+      displayUrl: "mouldkingcorp.com/Tegowalik5",
+      image: "assets/photos/eurostar-01-960.webp",
+      alt: "Mould King Eurostar model on a LEGO railway layout",
+      cta: "Visit Mould King",
       url: "https://mouldkingcorp.com/Tegowalik5"
     },
     {
       name: "Cubertime BigBoy",
-      description: "Open the BigBoy partner link from Tegowalik.",
-      discount: "",
+      description: "See the Cubertime BigBoy steam locomotive through the Tegowalik partner link.",
+      discount: "Affiliate link",
+      displayUrl: "bit.ly/4hWd3Bp",
+      image: "assets/photos/bigboy-01-960.webp",
+      alt: "Cubertime BigBoy steam locomotive model on railway track",
       cta: "View the set",
       url: "https://bit.ly/4hWd3Bp"
     }
@@ -61,22 +71,22 @@ const CONFIG = {
       url: "https://www.youtube.com/watch?v=fDoafbhYeCU"
     },
     {
-      title: "Three-Level Train Elevator",
-      tag: "Pybricks system",
-      description: "A modular lift that routes trains between three levels and converts into a bridge when aligned.",
-      image: "assets/photos/project-elevator.webp",
-      alt: "A three-level LEGO train elevator system",
-      cta: "Explore the code",
-      url: "https://github.com/Tegowalik/LEGO-Train-Elevator"
+      title: "22 Trains on 450 m of Track",
+      tag: "Two-room layout",
+      description: "A multi-level indoor network running 22 trains across 450 metres of track in two rooms.",
+      image: "assets/photos/layout-1200.webp",
+      alt: "A large indoor LEGO railway layout with many trains across several levels",
+      cta: "Watch setup #07",
+      url: "https://www.youtube.com/watch?v=6I8Wf-ZTa8M"
     },
     {
-      title: "Automated Train Station",
-      tag: "EV3 automation",
-      description: "Three EV3 bricks guide incoming trains to the best free platform and reserve it until departure.",
-      image: "assets/photos/station-1200.webp",
-      alt: "Multiple LEGO trains positioned at an automated station",
-      cta: "Explore the code",
-      url: "https://github.com/Tegowalik/LEGO-MINDSTORMS-EV3-Automated-Train-Station"
+      title: "400 m Indoor Railway",
+      tag: "Engineering showcase",
+      description: "A room-scale network with a train elevator, suspension bridge, and automated switches.",
+      image: "assets/photos/engineering-1200.webp",
+      alt: "An expansive indoor LEGO railway with elevated tracks and bridges",
+      cta: "Watch the full layout",
+      url: "https://www.youtube.com/watch?v=dowNK4egV6Y"
     }
   ],
 
@@ -85,6 +95,8 @@ const CONFIG = {
       title: "20-Way LEGO Train Crossing",
       label: "Free 3D-print files",
       description: "Download the STL files and assembly requirements for the custom 20-way track crossing.",
+      image: "assets/photos/2021-2-960.webp",
+      alt: "A custom multi-direction LEGO railway crossing",
       cta: "Open the instructions",
       url: "https://pinshape.com/items/112981-3d-printed-lego-trains-20-way-crossing"
     },
@@ -92,8 +104,47 @@ const CONFIG = {
       title: "Dual-Motor Train Controller",
       label: "Pybricks code & guide",
       description: "Run two train motors from one City Hub and control both from a single Powered Up remote.",
+      image: "assets/photos/60337-2-960.webp",
+      alt: "A motorized LEGO passenger train on track",
       cta: "View on GitHub",
       url: "https://github.com/Tegowalik/Pybricks-Train-Controller"
+    },
+    {
+      title: "Three-Level Train Elevator",
+      label: "Pybricks code & guide",
+      description: "Route trains between three levels with a lift that becomes part of the bridge when aligned.",
+      image: "assets/photos/project-elevator.webp",
+      alt: "A three-level LEGO train elevator system",
+      cta: "View on GitHub",
+      url: "https://github.com/Tegowalik/LEGO-Train-Elevator"
+    },
+    {
+      title: "Automated Train Station",
+      label: "EV3 code & guide",
+      description: "Send arriving trains to a free platform and keep the route reserved until departure.",
+      image: "assets/photos/station-1200.webp",
+      alt: "Multiple LEGO trains at an automated station",
+      cta: "View on GitHub",
+      url: "https://github.com/Tegowalik/LEGO-MINDSTORMS-EV3-Automated-Train-Station"
+    },
+    {
+      title: "Automated Switch Controller",
+      label: "Pybricks code & examples",
+      description: "Detect incoming trains and operate one or more switches with Powered Up or MINDSTORMS hardware.",
+      image: "assets/photos/img-8253-960.webp",
+      alt: "A LEGO railway with motorized switches and sensors",
+      cta: "View on GitHub",
+      url: "https://github.com/Tegowalik/LEGO-Switch-Controller"
+    }
+  ],
+
+  features: [
+    {
+      publication: "All3DP",
+      title: "The 30 Best 3D-Printed Trains & Railways",
+      description: "Tegowalik's multi-way LEGO crossing was selected for All3DP's editorial roundup of railway print projects.",
+      cta: "Read the feature",
+      url: "https://all3dp.com/2/3d-printed-railway-3d-printed-train/"
     }
   ],
 
@@ -237,18 +288,75 @@ function renderSocials() {
   });
 }
 
+function copyText(value, button) {
+  const fallback = () => {
+    const field = document.createElement("textarea");
+    field.value = value;
+    field.setAttribute("readonly", "");
+    field.style.position = "fixed";
+    field.style.opacity = "0";
+    document.body.append(field);
+    field.select();
+    document.execCommand("copy");
+    field.remove();
+  };
+
+  const action = navigator.clipboard?.writeText
+    ? navigator.clipboard.writeText(value).catch(fallback)
+    : Promise.resolve(fallback());
+
+  Promise.resolve(action).then(() => {
+    const original = button.textContent;
+    button.textContent = "Copied";
+    button.classList.add("copied");
+    window.setTimeout(() => {
+      button.textContent = original;
+      button.classList.remove("copied");
+    }, 1600);
+  });
+}
+
+function makeCopyButton(label, value) {
+  const button = document.createElement("button");
+  button.className = "copy-button";
+  button.type = "button";
+  button.textContent = label;
+  button.addEventListener("click", () => copyText(value, button));
+  return button;
+}
+
 function renderPartners() {
-  const entries = CONFIG.partners.filter((item) => item.name && item.description && item.cta && validWebUrl(item.url));
+  const entries = CONFIG.partners.filter((item) =>
+    item.name && item.description && item.image && item.alt && item.cta && validWebUrl(item.url)
+  );
   if (!entries.length) return;
 
   const section = document.querySelector("#partners");
   const container = document.querySelector("#partner-links");
   entries.forEach((item, index) => {
-    const link = document.createElement("a");
-    link.className = "partner-card";
-    link.href = item.url;
-    externalLinkAttributes(link, true);
+    const card = document.createElement("article");
+    card.className = "partner-card";
 
+    const imageLink = document.createElement("a");
+    imageLink.className = "partner-image-link";
+    imageLink.href = item.url;
+    imageLink.setAttribute("aria-label", "Open " + item.name + " partner link");
+    externalLinkAttributes(imageLink, true);
+    const image = document.createElement("img");
+    image.src = item.image;
+    if (item.image.endsWith("-960.webp")) {
+      image.srcset = item.image + " 960w, " + item.image.replace("-960.webp", "-1600.webp") + " 1600w";
+      image.sizes = "(min-width: 1020px) 33vw, (min-width: 700px) 50vw, 100vw";
+    }
+    image.alt = item.alt;
+    image.loading = "lazy";
+    image.decoding = "async";
+    image.width = 960;
+    image.height = 540;
+    imageLink.append(image);
+
+    const body = document.createElement("div");
+    body.className = "partner-body";
     const number = document.createElement("span");
     number.className = "partner-index";
     number.textContent = String(index + 1).padStart(2, "0");
@@ -256,21 +364,42 @@ function renderPartners() {
     title.textContent = item.name;
     const description = document.createElement("p");
     description.textContent = item.description;
-    link.append(number, title, description);
+    body.append(number, title, description);
 
     if (item.discount) {
+      const offer = document.createElement("div");
+      offer.className = "partner-offer";
       const discount = document.createElement("span");
       discount.className = "discount";
       discount.textContent = item.discount;
-      link.append(discount);
+      offer.append(discount);
+      if (item.code) {
+        const code = document.createElement("code");
+        code.className = "discount-code";
+        code.textContent = item.code;
+        offer.append(code, makeCopyButton("Copy code", item.code));
+      }
+      body.append(offer);
     }
 
-    const cta = document.createElement("span");
-    cta.className = "partner-cta";
-    cta.innerHTML = `<span></span><span aria-hidden="true">↗</span>`;
-    cta.firstElementChild.textContent = item.cta;
-    link.append(cta);
-    container.append(link);
+    const visibleUrl = document.createElement("span");
+    visibleUrl.className = "partner-url";
+    visibleUrl.textContent = item.displayUrl || new URL(item.url).hostname;
+    body.append(visibleUrl);
+
+    const actions = document.createElement("div");
+    actions.className = "partner-actions";
+    const link = document.createElement("a");
+    link.className = "partner-cta";
+    link.href = item.url;
+    link.innerHTML = `<span></span><span aria-hidden="true">↗</span>`;
+    link.firstElementChild.textContent = item.cta;
+    externalLinkAttributes(link, true);
+    actions.append(link, makeCopyButton("Copy link", item.url));
+    body.append(actions);
+
+    card.append(imageLink, body);
+    container.append(card);
   });
   section.hidden = false;
 }
@@ -291,6 +420,10 @@ function renderProjects() {
 
     const image = document.createElement("img");
     image.src = item.image;
+    if (item.image.endsWith("-960.webp")) {
+      image.srcset = item.image + " 960w, " + item.image.replace("-960.webp", "-1600.webp") + " 1600w";
+      image.sizes = "(min-width: 1020px) 33vw, (min-width: 700px) 50vw, 100vw";
+    }
     image.alt = item.alt;
     image.loading = "lazy";
     image.decoding = "async";
@@ -322,7 +455,7 @@ function renderProjects() {
 
 function renderResources() {
   const entries = CONFIG.resources.filter((item) =>
-    item.title && item.label && item.description && item.cta && validWebUrl(item.url)
+    item.title && item.label && item.description && item.image && item.alt && item.cta && validWebUrl(item.url)
   );
   if (!entries.length) return;
 
@@ -334,6 +467,20 @@ function renderResources() {
     link.href = item.url;
     externalLinkAttributes(link);
 
+    const image = document.createElement("img");
+    image.src = item.image;
+    if (item.image.endsWith("-960.webp")) {
+      image.srcset = item.image + " 960w, " + item.image.replace("-960.webp", "-1600.webp") + " 1600w";
+      image.sizes = "(min-width: 1020px) 33vw, (min-width: 700px) 50vw, 100vw";
+    }
+    image.alt = item.alt;
+    image.loading = "lazy";
+    image.decoding = "async";
+    image.width = 960;
+    image.height = 540;
+
+    const content = document.createElement("span");
+    content.className = "resource-content";
     const label = document.createElement("span");
     label.className = "resource-label";
     label.textContent = item.label;
@@ -348,7 +495,41 @@ function renderResources() {
     cta.innerHTML = `<span></span><span aria-hidden="true">↗</span>`;
     cta.firstElementChild.textContent = item.cta;
 
-    link.append(label, title, description, cta);
+    content.append(label, title, description, cta);
+    link.append(image, content);
+    container.append(link);
+  });
+  section.hidden = false;
+}
+
+function renderFeatures() {
+  const entries = CONFIG.features.filter((item) =>
+    item.publication && item.title && item.description && item.cta && validWebUrl(item.url)
+  );
+  if (!entries.length) return;
+
+  const section = document.querySelector("#features");
+  const container = document.querySelector("#feature-links");
+  entries.forEach((item) => {
+    const link = document.createElement("a");
+    link.className = "feature-card";
+    link.href = item.url;
+    externalLinkAttributes(link);
+
+    const publication = document.createElement("span");
+    publication.className = "feature-publication";
+    publication.textContent = item.publication;
+    const text = document.createElement("span");
+    text.className = "feature-text";
+    const title = document.createElement("strong");
+    title.textContent = item.title;
+    const description = document.createElement("span");
+    description.textContent = item.description;
+    text.append(title, description);
+    const cta = document.createElement("span");
+    cta.className = "feature-cta";
+    cta.textContent = item.cta + " ↗";
+    link.append(publication, text, cta);
     container.append(link);
   });
   section.hidden = false;
@@ -382,6 +563,7 @@ renderProfile();
 renderPartners();
 renderProjects();
 renderResources();
+renderFeatures();
 renderSocials();
 renderGallery();
 renderBusiness();
