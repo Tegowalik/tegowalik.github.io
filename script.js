@@ -19,18 +19,18 @@ const CONFIG = {
     alt: "A huge multi-level LEGO railway filling a room with trains, bridges, and a train elevator"
   },
 
-  popularSnapshot: "28 September 2026",
+  popularSnapshot: "29 September 2026",
   popularVideos: [
-    { platform: "TikTok", icon: "tiktok", title: "Long LEGO Trains Through a Gigantic Track Setup", views: 1100000, image: "assets/photos/tegowalik-2023-v3-960.webp", alt: "Long LEGO trains running through a gigantic indoor track setup", url: "https://www.tiktok.com/@tegowalik/video/7515723242867264790" },
-    { platform: "YouTube", icon: "youtube", title: "350 m Track, Large Bridges, Automated Switches & Station", views: 793834, image: "assets/photos/2022-16-9-960.webp", alt: "A large LEGO railway with bridges, switches, and multiple trains", url: "https://www.youtube.com/watch?v=CItJ504veHI" },
-    { platform: "YouTube", icon: "youtube", title: "LEGO Train Crashes #01", views: 561654, image: "assets/photos/crashes5-960.webp", alt: "LEGO trains colliding on a railway layout", url: "https://www.youtube.com/watch?v=x1rFqrJJlTo" },
-    { platform: "YouTube", icon: "youtube", title: "15 Trains, 400 m Track & a Multi-Level Suspension Bridge", views: 359046, image: "assets/photos/tegowalik-2023-v2-min-fixed-min-2-960.webp", alt: "A multi-level LEGO railway with a large suspension bridge", url: "https://www.youtube.com/watch?v=RmNIQbDIi-M" },
-    { platform: "TikTok", icon: "tiktok", title: "LEGO Train Crashes on a Bridge", views: 260800, image: "assets/photos/crashes5-960.webp", alt: "A LEGO train crash on a bridge", url: "https://www.tiktok.com/@tegowalik/video/7492348795515063574" },
-    { platform: "YouTube", icon: "youtube", title: "400 m Track, Train Elevator, Suspension Bridge & Automation", views: 225544, image: "assets/photos/engineering-1200.webp", alt: "A large indoor LEGO railway with an elevator and elevated bridges", url: "https://www.youtube.com/watch?v=dowNK4egV6Y" },
-    { platform: "YouTube", icon: "youtube", title: "LEGO City Train Crashes #03", views: 217643, image: "assets/photos/crashes5-960.webp", alt: "LEGO trains crashing on a complex track layout", url: "https://www.youtube.com/watch?v=2slQXb5EGVo" },
-    { platform: "YouTube", icon: "youtube", title: "LEGO Train Crashes #02", views: 138397, image: "assets/photos/crashes5-960.webp", alt: "LEGO train crash compilation", url: "https://www.youtube.com/watch?v=fIOEzxcv-cM" },
-    { platform: "YouTube", icon: "youtube", title: "LEGO City Train Crashes #04", views: 127191, image: "assets/photos/crashes5-960.webp", alt: "LEGO trains falling from bridges and colliding", url: "https://www.youtube.com/watch?v=fHL549lLpn0" },
-    { platform: "TikTok", icon: "tiktok", title: "Train POV Through a Gigantic Track Setup #02", views: 108300, image: "assets/photos/2022-16-9-960.webp", alt: "Point-of-view run through a gigantic LEGO train track setup", url: "https://www.tiktok.com/@tegowalik/video/7440394892691410198" }
+    { platform: "TikTok", icon: "tiktok", title: "Long LEGO Trains Through a Gigantic Track Setup", views: 1100000, image: "assets/photos/popular-tiktok-7515723242867264790-960.webp", alt: "Long LEGO trains running through a gigantic indoor track setup", url: "https://www.tiktok.com/@tegowalik/video/7515723242867264790" },
+    { platform: "YouTube", icon: "youtube", title: "350 m Track, Large Bridges, Automated Switches & Station", views: 793875, image: "assets/photos/popular-youtube-citj504vehi-960.webp", alt: "Thumbnail from the 350 metre LEGO train track setup video", url: "https://www.youtube.com/watch?v=CItJ504veHI" },
+    { platform: "YouTube", icon: "youtube", title: "LEGO Train Crashes #01", views: 561675, image: "assets/photos/popular-youtube-x1rfqrjjlto-960.webp", alt: "Thumbnail from LEGO City Train Crashes number one", url: "https://www.youtube.com/watch?v=x1rFqrJJlTo" },
+    { platform: "YouTube", icon: "youtube", title: "15 Trains, 400 m Track & a Multi-Level Suspension Bridge", views: 359450, image: "assets/photos/popular-youtube-rmniqbdii-m-960.webp", alt: "Thumbnail from the 15-train and 400-metre track setup video", url: "https://www.youtube.com/watch?v=RmNIQbDIi-M" },
+    { platform: "YouTube", icon: "youtube", title: "That Was Not Planned", views: 263677, image: "assets/photos/popular-youtube-pyrkogbojpw-960.webp", alt: "Thumbnail from the LEGO train crash short That Was Not Planned", url: "https://www.youtube.com/watch?v=PyRkOgBOJPw" },
+    { platform: "TikTok", icon: "tiktok", title: "LEGO Train Crashes on a Bridge", views: 260800, image: "assets/photos/popular-tiktok-7492348795515063574-960.webp", alt: "Cover from the LEGO train bridge crash TikTok", url: "https://www.tiktok.com/@tegowalik/video/7492348795515063574" },
+    { platform: "YouTube", icon: "youtube", title: "400 m Track, Train Elevator, Suspension Bridge & Automation", views: 225592, image: "assets/photos/popular-youtube-downk4egv6y-960.webp", alt: "Thumbnail from the 400-metre automated LEGO railway video", url: "https://www.youtube.com/watch?v=dowNK4egV6Y" },
+    { platform: "YouTube", icon: "youtube", title: "LEGO City Train Crashes #03", views: 217669, image: "assets/photos/popular-youtube-2slqxb5egvo-960.webp", alt: "Thumbnail from LEGO City Train Crashes number three", url: "https://www.youtube.com/watch?v=2slQXb5EGVo" },
+    { platform: "YouTube", icon: "youtube", title: "LEGO Train Crashes #02", views: 138406, image: "assets/photos/popular-youtube-fioezxcv-cm-960.webp", alt: "Thumbnail from LEGO City Train Crashes number two", url: "https://www.youtube.com/watch?v=fIOEzxcv-cM" },
+    { platform: "YouTube", icon: "youtube", title: "LEGO City Train Crashes #04", views: 127235, image: "assets/photos/popular-youtube-fhl549llpn0-960.webp", alt: "Thumbnail from LEGO City Train Crashes number four", url: "https://www.youtube.com/watch?v=fHL549lLpn0" }
   ],
 
   socials: [
@@ -110,8 +110,8 @@ const CONFIG = {
       title: "20-Way LEGO Train Crossing",
       label: "Free 3D-print files",
       description: "Download the STL files and assembly requirements for the custom 20-way track crossing.",
-      image: "assets/photos/2021-2-960.webp",
-      alt: "A custom multi-direction LEGO railway crossing",
+      image: "assets/photos/resource-20-way-crossing-closeup-960.webp",
+      alt: "Close-up of the custom 20-way LEGO railway crossing geometry",
       cta: "Open the instructions",
       url: "https://pinshape.com/items/112981-3d-printed-lego-trains-20-way-crossing"
     },
@@ -119,8 +119,8 @@ const CONFIG = {
       title: "Dual-Motor Train Controller",
       label: "Pybricks code & guide",
       description: "Run two train motors from one City Hub and control both from a single Powered Up remote.",
-      image: "assets/photos/60337-2-960.webp",
-      alt: "A motorized LEGO passenger train on track",
+      image: "assets/photos/resource-dual-motor-controller-clean-960.webp",
+      alt: "Powered Up remote configuration for the dual-motor LEGO train controller",
       cta: "View on GitHub",
       url: "https://github.com/Tegowalik/Pybricks-Train-Controller"
     },
@@ -163,17 +163,17 @@ const CONFIG = {
     },
     {
       publication: "Rebrickable",
-      title: "Tegowalik's train builds",
-      description: "Instructions and build references collected on the LEGO building community.",
-      cta: "View the builds",
-      url: "https://rebrickable.com/users/Tegowalik/mocs/"
+      title: "Pybricks Part 2",
+      description: "Rebrickable's Pybricks guide references Tegowalik's dual-motor LEGO train controller.",
+      cta: "Read the article",
+      url: "https://rebrickable.com/blog/739/pybricks-part-2/"
     },
     {
       publication: "Reddit",
-      title: "Tegowalik around the LEGO community",
-      description: "Find community discussions and shared Tegowalik railway projects.",
-      cta: "Search Reddit",
-      url: "https://www.reddit.com/search/?q=tegowalik"
+      title: "Need help with signaling?",
+      description: "A Factorio community thread featuring Tegowalik's dense multi-level LEGO railway.",
+      cta: "Open the thread",
+      url: "https://www.reddit.com/r/Factoriohno/comments/1qi1inf/need_help_with_signaling/"
     }
   ],
 
