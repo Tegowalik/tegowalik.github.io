@@ -119,8 +119,8 @@ const CONFIG = {
       title: "Dual-Motor Train Controller",
       label: "Pybricks code & guide",
       description: "Run two train motors from one City Hub and control both from a single Powered Up remote.",
-      image: "assets/photos/resource-dual-motor-controller-clean-960.webp",
-      alt: "Powered Up remote configuration for the dual-motor LEGO train controller",
+      image: "assets/photos/tegowalik-dual-motor-thumbnail-960.webp",
+      alt: "Yellow LEGO locomotive with the dual-motor Powered Up controller interface",
       cta: "View on GitHub",
       url: "https://github.com/Tegowalik/Pybricks-Train-Controller"
     },
