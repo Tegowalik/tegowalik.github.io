@@ -8,14 +8,15 @@ All editable page content is in the clearly marked `CONFIG` object at the top of
 
 - `profile` controls the name, page title, tagline, description, primary YouTube link, and business email.
 - `heroImage` controls the main image and its accessible description.
+- `popularSnapshot` and `popularVideos` control the dated cross-platform Top 10. Update the date and counts together; entries are sorted automatically.
 - `socials` controls the social profile cards.
 - `partners` controls affiliate and discount cards.
 - `projects` controls the featured signature projects.
 - `resources` controls downloadable files, tutorials, and code links.
-- `features` controls verified third-party coverage.
+- `features` controls editorial coverage and community references.
 - `gallery` controls the photo gallery.
 
-An entry is displayed only when it has the required content and, for links, a valid `http://` or `https://` URL. Remove an entry or leave its URL empty to hide it. If all partner or gallery entries are removed, that complete section is hidden.
+An entry is displayed only when it has the required content and, for links, a valid `http://` or `https://` URL. Remove an entry or leave its URL empty to hide it. If all partner, popular-video, or gallery entries are removed, that complete section is hidden.
 
 ## Replace imagery
 

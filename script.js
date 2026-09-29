@@ -14,10 +14,24 @@ const CONFIG = {
   },
 
   heroImage: {
-    src: "assets/photos/hero-960.webp",
-    srcset: "assets/photos/hero-960.webp 960w, assets/photos/hero-1600.webp 1600w",
-    alt: "A multi-level LEGO railway with several trains and a Tegowalik sign"
+    src: "assets/photos/tegowalik-2023-v2-min-fixed-min-2-960.webp",
+    srcset: "assets/photos/tegowalik-2023-v2-min-fixed-min-2-960.webp 960w, assets/photos/tegowalik-2023-v2-min-fixed-min-2-1600.webp 1600w",
+    alt: "A huge multi-level LEGO railway filling a room with trains, bridges, and a train elevator"
   },
+
+  popularSnapshot: "28 September 2026",
+  popularVideos: [
+    { platform: "TikTok", icon: "tiktok", title: "Long LEGO Trains Through a Gigantic Track Setup", views: 1100000, image: "assets/photos/tegowalik-2023-v3-960.webp", alt: "Long LEGO trains running through a gigantic indoor track setup", url: "https://www.tiktok.com/@tegowalik/video/7515723242867264790" },
+    { platform: "YouTube", icon: "youtube", title: "350 m Track, Large Bridges, Automated Switches & Station", views: 793834, image: "assets/photos/2022-16-9-960.webp", alt: "A large LEGO railway with bridges, switches, and multiple trains", url: "https://www.youtube.com/watch?v=CItJ504veHI" },
+    { platform: "YouTube", icon: "youtube", title: "LEGO Train Crashes #01", views: 561654, image: "assets/photos/crashes5-960.webp", alt: "LEGO trains colliding on a railway layout", url: "https://www.youtube.com/watch?v=x1rFqrJJlTo" },
+    { platform: "YouTube", icon: "youtube", title: "15 Trains, 400 m Track & a Multi-Level Suspension Bridge", views: 359046, image: "assets/photos/tegowalik-2023-v2-min-fixed-min-2-960.webp", alt: "A multi-level LEGO railway with a large suspension bridge", url: "https://www.youtube.com/watch?v=RmNIQbDIi-M" },
+    { platform: "TikTok", icon: "tiktok", title: "LEGO Train Crashes on a Bridge", views: 260800, image: "assets/photos/crashes5-960.webp", alt: "A LEGO train crash on a bridge", url: "https://www.tiktok.com/@tegowalik/video/7492348795515063574" },
+    { platform: "YouTube", icon: "youtube", title: "400 m Track, Train Elevator, Suspension Bridge & Automation", views: 225544, image: "assets/photos/engineering-1200.webp", alt: "A large indoor LEGO railway with an elevator and elevated bridges", url: "https://www.youtube.com/watch?v=dowNK4egV6Y" },
+    { platform: "YouTube", icon: "youtube", title: "LEGO City Train Crashes #03", views: 217643, image: "assets/photos/crashes5-960.webp", alt: "LEGO trains crashing on a complex track layout", url: "https://www.youtube.com/watch?v=2slQXb5EGVo" },
+    { platform: "YouTube", icon: "youtube", title: "LEGO Train Crashes #02", views: 138397, image: "assets/photos/crashes5-960.webp", alt: "LEGO train crash compilation", url: "https://www.youtube.com/watch?v=fIOEzxcv-cM" },
+    { platform: "YouTube", icon: "youtube", title: "LEGO City Train Crashes #04", views: 127191, image: "assets/photos/crashes5-960.webp", alt: "LEGO trains falling from bridges and colliding", url: "https://www.youtube.com/watch?v=fHL549lLpn0" },
+    { platform: "TikTok", icon: "tiktok", title: "Train POV Through a Gigantic Track Setup #02", views: 108300, image: "assets/photos/2022-16-9-960.webp", alt: "Point-of-view run through a gigantic LEGO train track setup", url: "https://www.tiktok.com/@tegowalik/video/7440394892691410198" }
+  ],
 
   socials: [
     { name: "YouTube", handle: "@Tegowalik", url: "https://www.youtube.com/@Tegowalik", icon: "youtube" },
@@ -42,7 +56,7 @@ const CONFIG = {
     {
       name: "Mould King",
       description: "Save on every product through the Tegowalik partner link.",
-      discount: "5% discount",
+      discount: "5% off all products",
       displayUrl: "mouldkingcorp.com/Tegowalik5",
       image: "assets/photos/eurostar-01-960.webp",
       alt: "Mould King Eurostar model on a LEGO railway layout",
@@ -146,6 +160,20 @@ const CONFIG = {
       description: "Tegowalik's multi-way LEGO crossing was selected for All3DP's editorial roundup of railway print projects.",
       cta: "Read the feature",
       url: "https://all3dp.com/2/3d-printed-railway-3d-printed-train/"
+    },
+    {
+      publication: "Rebrickable",
+      title: "Tegowalik's train builds",
+      description: "Instructions and build references collected on the LEGO building community.",
+      cta: "View the builds",
+      url: "https://rebrickable.com/users/Tegowalik/mocs/"
+    },
+    {
+      publication: "Reddit",
+      title: "Tegowalik around the LEGO community",
+      description: "Find community discussions and shared Tegowalik railway projects.",
+      cta: "Search Reddit",
+      url: "https://www.reddit.com/search/?q=tegowalik"
     }
   ],
 
@@ -334,7 +362,7 @@ function renderPartners() {
 
   const section = document.querySelector("#partners");
   const container = document.querySelector("#partner-links");
-  entries.forEach((item, index) => {
+  entries.forEach((item) => {
     const card = document.createElement("article");
     card.className = "partner-card";
 
@@ -358,14 +386,11 @@ function renderPartners() {
 
     const body = document.createElement("div");
     body.className = "partner-body";
-    const number = document.createElement("span");
-    number.className = "partner-index";
-    number.textContent = String(index + 1).padStart(2, "0");
     const title = document.createElement("h3");
     title.textContent = item.name;
     const description = document.createElement("p");
     description.textContent = item.description;
-    body.append(number, title, description);
+    body.append(title, description);
 
     if (item.discount) {
       const offer = document.createElement("div");
@@ -402,6 +427,67 @@ function renderPartners() {
     card.append(imageLink, body);
     container.append(card);
   });
+  section.hidden = false;
+}
+
+function renderPopular() {
+  const entries = CONFIG.popularVideos
+    .filter((item) => item.platform && item.title && Number.isFinite(item.views) && item.image && item.alt && validWebUrl(item.url))
+    .sort((a, b) => b.views - a.views)
+    .slice(0, 10);
+  if (!entries.length) return;
+
+  const section = document.querySelector("#popular");
+  const container = document.querySelector("#popular-grid");
+  const numberFormat = new Intl.NumberFormat("en-US");
+
+  entries.forEach((item, index) => {
+    const link = document.createElement("a");
+    link.className = "popular-card" + (index === 0 ? " popular-card-lead" : "");
+    link.href = item.url;
+    link.setAttribute("aria-label", "Number " + (index + 1) + ": " + item.title + " on " + item.platform + ", " + numberFormat.format(item.views) + " views");
+    externalLinkAttributes(link);
+
+    const image = document.createElement("img");
+    image.src = item.image;
+    if (item.image.endsWith("-960.webp")) {
+      image.srcset = item.image + " 960w, " + item.image.replace("-960.webp", "-1600.webp") + " 1600w";
+      image.sizes = index === 0 ? "(min-width: 800px) 58vw, 100vw" : "(min-width: 800px) 28vw, 100vw";
+    }
+    image.alt = item.alt;
+    image.loading = index < 2 ? "eager" : "lazy";
+    image.decoding = "async";
+
+    const shade = document.createElement("span");
+    shade.className = "popular-shade";
+    const rank = document.createElement("span");
+    rank.className = "popular-rank";
+    rank.textContent = String(index + 1).padStart(2, "0");
+
+    const content = document.createElement("span");
+    content.className = "popular-content";
+    const platform = document.createElement("span");
+    platform.className = "popular-platform";
+    const icon = document.createElement("span");
+    icon.innerHTML = ICONS[item.icon] || "";
+    const platformName = document.createElement("span");
+    platformName.textContent = item.platform;
+    platform.append(icon, platformName);
+
+    const title = document.createElement("strong");
+    title.className = "popular-title";
+    title.textContent = item.title;
+    const views = document.createElement("span");
+    views.className = "popular-views";
+    views.textContent = numberFormat.format(item.views) + " views";
+
+    content.append(platform, title, views);
+    link.append(image, shade, rank, content);
+    container.append(link);
+  });
+
+  const snapshot = document.querySelector("#popular-snapshot");
+  snapshot.textContent = "View-count snapshot: " + CONFIG.popularSnapshot + ". Counts change continuously and are refreshed manually.";
   section.hidden = false;
 }
 
@@ -562,6 +648,7 @@ function renderBusiness() {
 
 renderProfile();
 renderPartners();
+renderPopular();
 renderProjects();
 renderResources();
 renderFeatures();

@@ -31,30 +31,32 @@
 
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-visual" aria-hidden="true">
+        <img
+          data-hero-image
+          src="assets/photos/tegowalik-2023-v2-min-fixed-min-2-960.webp"
+          srcset="assets/photos/tegowalik-2023-v2-min-fixed-min-2-960.webp 960w, assets/photos/tegowalik-2023-v2-min-fixed-min-2-1600.webp 1600w"
+          sizes="(min-width: 1180px) 1180px, 100vw"
+          width="1600"
+          height="900"
+          alt=""
+          fetchpriority="high"
+          decoding="async"
+        >
+      </div>
       <div class="hero-copy">
         <p class="eyebrow">Large layouts · Automation · Pybricks</p>
         <h1 id="hero-title"><span class="muted">LEGO railways at scale.</span><br><span data-tagline>Built. Automated. Crashed.</span></h1>
         <p class="hero-description" data-description>Large indoor and garden railways with automated stations, train elevators, and Powered Up control.</p>
-        <a class="primary-button" data-primary-link href="https://www.youtube.com/@Tegowalik">
-          Watch on YouTube
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
-        </a>
-      </div>
-
-      <div class="hero-visual">
-        <img
-          data-hero-image
-          src="assets/photos/hero-960.webp"
-          srcset="assets/photos/hero-960.webp 960w, assets/photos/hero-1600.webp 1600w"
-          sizes="(min-width: 700px) 46vw, calc(100vw - 2rem)"
-          width="960"
-          height="960"
-          alt="A multi-level LEGO railway with several trains and a Tegowalik sign"
-          fetchpriority="high"
-          decoding="async"
-        >
-        <div class="visual-shade" aria-hidden="true"></div>
-        <p class="visual-label"><span>Current focus</span>Rail systems</p>
+        <div class="hero-actions">
+          <a class="primary-button" data-primary-link href="https://www.youtube.com/@Tegowalik">Watch on YouTube <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>
+          <a class="secondary-button" href="#projects">Explore the layouts ↓</a>
+        </div>
+        <dl class="hero-stats" aria-label="Tegowalik layout highlights">
+          <div><dt>450 m</dt><dd>of track</dd></div>
+          <div><dt>22</dt><dd>trains</dd></div>
+          <div><dt>3</dt><dd>lift levels</dd></div>
+        </dl>
       </div>
     </section>
 
@@ -66,6 +68,16 @@
       </div>
       <div class="partner-grid" id="partner-links"></div>
       <p class="affiliate-note"><strong>Affiliate disclosure:</strong> These are affiliate links. If you buy through them, I may receive a small commission at no extra cost to you.</p>
+    </section>
+
+    <section class="popular-section" id="popular" aria-labelledby="popular-title" hidden>
+      <div class="section-heading popular-heading">
+        <p class="eyebrow">Across the platforms</p>
+        <h2 id="popular-title">Most watched</h2>
+        <p>Top 10 public view counts across YouTube and TikTok. Instagram is reviewed too, but currently hides comparable public counts.</p>
+      </div>
+      <div class="popular-grid" id="popular-grid"></div>
+      <p class="snapshot-note" id="popular-snapshot"></p>
     </section>
 
     <section class="project-section" id="projects" aria-labelledby="projects-title" hidden>
@@ -89,9 +101,9 @@
 
     <section class="feature-section" id="features" aria-labelledby="features-title" hidden>
       <div class="section-heading">
-        <p class="eyebrow">Also featured by</p>
+        <p class="eyebrow">Also seen on</p>
         <h2 id="features-title">Seen beyond the channel</h2>
-        <p>Independent coverage of Tegowalik projects.</p>
+        <p>Editorial coverage and community references for Tegowalik projects.</p>
       </div>
       <div class="feature-links" id="feature-links"></div>
     </section>
