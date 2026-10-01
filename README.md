@@ -48,6 +48,8 @@ node scripts/update-most-viewed.mjs
 
 The updater collects public YouTube, TikTok, and Instagram data, merges dated creator-verified rows from `data/most-viewed-curated.json`, keeps the last verified rows when a platform exposes only partial public data, produces local 960 px and 1600 px previews, updates `script.js`, and writes machine-readable coverage details to `data/most-viewed-audit.json`. Public-data gaps never block the scheduled update and are not shown as website copy.
 
+Audience counts beside the social links are refreshed by `node scripts/update-social-stats.mjs`. The same weekly workflow runs both updaters and records per-platform collection or fallback status in `data/social-stats.json`.
+
 ## Change text
 
 The main name, tagline, and description live in `CONFIG.profile`. Section headings and the LEGO trademark notice are in `index.html`.

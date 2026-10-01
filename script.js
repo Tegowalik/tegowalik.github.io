@@ -44,9 +44,9 @@ const CONFIG = {
   ],
 
   socials: [
-    { name: "YouTube", handle: "@Tegowalik", url: "https://www.youtube.com/@Tegowalik", icon: "youtube" },
-    { name: "Instagram", handle: "@tegowalik", url: "https://www.instagram.com/tegowalik", icon: "instagram" },
-    { name: "TikTok", handle: "@tegowalik", url: "https://www.tiktok.com/@tegowalik", icon: "tiktok" },
+    { name: "YouTube", handle: "@Tegowalik", url: "https://www.youtube.com/@Tegowalik", icon: "youtube", audience: "7.47K subscribers", audienceCount: 7470, audienceMetric: "subscribers" },
+    { name: "Instagram", handle: "@tegowalik", url: "https://www.instagram.com/tegowalik", icon: "instagram", audience: "2,325 followers", audienceCount: 2325, audienceMetric: "followers" },
+    { name: "TikTok", handle: "@tegowalik", url: "https://www.tiktok.com/@tegowalik", icon: "tiktok", audience: "4,644 followers", audienceCount: 4644, audienceMetric: "followers" },
     { name: "GitHub", handle: "@Tegowalik", url: "https://github.com/Tegowalik", icon: "github" }
   ],
 
@@ -308,7 +308,7 @@ function renderSocials() {
     const link = document.createElement("a");
     link.className = "social-card";
     link.href = item.url;
-    link.setAttribute("aria-label", `Open ${item.name}: ${item.handle}`);
+    link.setAttribute("aria-label", `Open ${item.name}: ${item.handle}${item.audience ? `, ${item.audience}` : ""}`);
     externalLinkAttributes(link);
 
     const icon = document.createElement("span");
@@ -325,11 +325,20 @@ function renderSocials() {
     handle.textContent = item.handle;
     meta.append(name, handle);
 
+    let audience;
+    if (item.audience && Number.isFinite(item.audienceCount)) {
+      audience = document.createElement("span");
+      audience.className = "social-audience";
+      audience.textContent = item.audience;
+    }
+
     const arrow = document.createElement("span");
     arrow.className = "arrow";
     arrow.setAttribute("aria-hidden", "true");
     arrow.textContent = "↗";
-    link.append(icon, meta, arrow);
+    link.append(icon, meta);
+    if (audience) link.append(audience);
+    link.append(arrow);
     container.append(link);
   });
 }

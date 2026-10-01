@@ -1,0 +1,41 @@
+{
+  "generatedAt": "2026-10-01T12:12:53.361Z",
+  "entries": [
+    {
+      "platform": "YouTube",
+      "count": 7470,
+      "display": "7.47K subscribers",
+      "metric": "subscribers",
+      "source": "Public YouTube channel header",
+      "status": "fresh"
+    },
+    {
+      "platform": "Instagram",
+      "count": 2325,
+      "display": "2,325 followers",
+      "metric": "followers",
+      "status": "retained",
+      "source": "Public Instagram profile"
+    },
+    {
+      "platform": "TikTok",
+      "count": 4644,
+      "display": "4,644 followers",
+      "metric": "followers",
+      "source": "Public TikTok profile data",
+      "status": "fresh"
+    }
+  ],
+  "coverage": {
+    "YouTube": {
+      "status": "fresh"
+    },
+    "Instagram": {
+      "status": "retained",
+      "error": "429 https://www.instagram.com/api/v1/users/web_profile_info/?username=tegowalik"
+    },
+    "TikTok": {
+      "status": "fresh"
+    }
+  }
+}
