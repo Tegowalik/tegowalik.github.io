@@ -157,7 +157,7 @@ const CONFIG = {
     {
       publication: "All3DP",
       title: "The 30 Best 3D-Printed Trains & Railways",
-      description: "Tegowalik's multi-way LEGO crossing was selected for All3DP's editorial roundup of railway print projects.",
+      description: "All3DP features Tegowalik's 8-way LEGO crossing and links the growing-crossings video and 20-way design.",
       cta: "Read the feature",
       url: "https://all3dp.com/2/3d-printed-railway-3d-printed-train/"
     },
