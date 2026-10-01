@@ -21,16 +21,16 @@ const CONFIG = {
 
   popularSnapshot: "29 September 2026",
   popularVideos: [
-    { platform: "TikTok", icon: "tiktok", title: "Long LEGO Trains Through a Gigantic Track Setup", views: 1100000, image: "assets/photos/popular-tiktok-7515723242867264790-960.webp", alt: "Long LEGO trains running through a gigantic indoor track setup", url: "https://www.tiktok.com/@tegowalik/video/7515723242867264790" },
-    { platform: "YouTube", icon: "youtube", title: "350 m Track, Large Bridges, Automated Switches & Station", views: 793875, image: "assets/photos/popular-youtube-citj504vehi-960.webp", alt: "Thumbnail from the 350 metre LEGO train track setup video", url: "https://www.youtube.com/watch?v=CItJ504veHI" },
-    { platform: "YouTube", icon: "youtube", title: "LEGO Train Crashes #01", views: 561675, image: "assets/photos/popular-youtube-x1rfqrjjlto-960.webp", alt: "Thumbnail from LEGO City Train Crashes number one", url: "https://www.youtube.com/watch?v=x1rFqrJJlTo" },
-    { platform: "YouTube", icon: "youtube", title: "15 Trains, 400 m Track & a Multi-Level Suspension Bridge", views: 359450, image: "assets/photos/popular-youtube-rmniqbdii-m-960.webp", alt: "Thumbnail from the 15-train and 400-metre track setup video", url: "https://www.youtube.com/watch?v=RmNIQbDIi-M" },
-    { platform: "YouTube", icon: "youtube", title: "That Was Not Planned", views: 263677, image: "assets/photos/popular-youtube-pyrkogbojpw-960.webp", alt: "Thumbnail from the LEGO train crash short That Was Not Planned", url: "https://www.youtube.com/watch?v=PyRkOgBOJPw" },
-    { platform: "TikTok", icon: "tiktok", title: "LEGO Train Crashes on a Bridge", views: 260800, image: "assets/photos/popular-tiktok-7492348795515063574-960.webp", alt: "Cover from the LEGO train bridge crash TikTok", url: "https://www.tiktok.com/@tegowalik/video/7492348795515063574" },
-    { platform: "YouTube", icon: "youtube", title: "400 m Track, Train Elevator, Suspension Bridge & Automation", views: 225592, image: "assets/photos/popular-youtube-downk4egv6y-960.webp", alt: "Thumbnail from the 400-metre automated LEGO railway video", url: "https://www.youtube.com/watch?v=dowNK4egV6Y" },
-    { platform: "YouTube", icon: "youtube", title: "LEGO City Train Crashes #03", views: 217669, image: "assets/photos/popular-youtube-2slqxb5egvo-960.webp", alt: "Thumbnail from LEGO City Train Crashes number three", url: "https://www.youtube.com/watch?v=2slQXb5EGVo" },
-    { platform: "YouTube", icon: "youtube", title: "LEGO Train Crashes #02", views: 138406, image: "assets/photos/popular-youtube-fioezxcv-cm-960.webp", alt: "Thumbnail from LEGO City Train Crashes number two", url: "https://www.youtube.com/watch?v=fIOEzxcv-cM" },
-    { platform: "YouTube", icon: "youtube", title: "LEGO City Train Crashes #04", views: 127235, image: "assets/photos/popular-youtube-fhl549llpn0-960.webp", alt: "Thumbnail from LEGO City Train Crashes number four", url: "https://www.youtube.com/watch?v=fHL549lLpn0" }
+    { platform: "TikTok", icon: "tiktok", format: "reel", title: "Long LEGO Trains Through a Gigantic Track Setup", views: 1100000, image: "assets/photos/popular-tiktok-7515723242867264790-960.webp", alt: "Long LEGO trains running through a gigantic indoor track setup", url: "https://www.tiktok.com/@tegowalik/video/7515723242867264790" },
+    { platform: "YouTube", icon: "youtube", format: "video", title: "350 m Track, Large Bridges, Automated Switches & Station", views: 793875, image: "assets/photos/popular-youtube-citj504vehi-960.webp", alt: "Thumbnail from the 350 metre LEGO train track setup video", url: "https://www.youtube.com/watch?v=CItJ504veHI" },
+    { platform: "YouTube", icon: "youtube", format: "video", title: "LEGO Train Crashes #01", views: 561675, image: "assets/photos/popular-youtube-x1rfqrjjlto-960.webp", alt: "Thumbnail from LEGO City Train Crashes number one", url: "https://www.youtube.com/watch?v=x1rFqrJJlTo" },
+    { platform: "YouTube", icon: "youtube", format: "video", title: "15 Trains, 400 m Track & a Multi-Level Suspension Bridge", views: 359450, image: "assets/photos/popular-youtube-rmniqbdii-m-960.webp", alt: "Thumbnail from the 15-train and 400-metre track setup video", url: "https://www.youtube.com/watch?v=RmNIQbDIi-M" },
+    { platform: "YouTube", icon: "youtube", format: "reel", title: "That Was Not Planned", views: 263677, image: "assets/photos/popular-youtube-pyrkogbojpw-960.webp", alt: "Thumbnail from the LEGO train crash short That Was Not Planned", url: "https://www.youtube.com/watch?v=PyRkOgBOJPw" },
+    { platform: "TikTok", icon: "tiktok", format: "reel", title: "LEGO Train Crashes on a Bridge", views: 260800, image: "assets/photos/popular-tiktok-7492348795515063574-960.webp", alt: "Cover from the LEGO train bridge crash TikTok", url: "https://www.tiktok.com/@tegowalik/video/7492348795515063574" },
+    { platform: "YouTube", icon: "youtube", format: "video", title: "400 m Track, Train Elevator, Suspension Bridge & Automation", views: 225592, image: "assets/photos/popular-youtube-downk4egv6y-960.webp", alt: "Thumbnail from the 400-metre automated LEGO railway video", url: "https://www.youtube.com/watch?v=dowNK4egV6Y" },
+    { platform: "YouTube", icon: "youtube", format: "video", title: "LEGO City Train Crashes #03", views: 217669, image: "assets/photos/popular-youtube-2slqxb5egvo-960.webp", alt: "Thumbnail from LEGO City Train Crashes number three", url: "https://www.youtube.com/watch?v=2slQXb5EGVo" },
+    { platform: "YouTube", icon: "youtube", format: "video", title: "LEGO Train Crashes #02", views: 138406, image: "assets/photos/popular-youtube-fioezxcv-cm-960.webp", alt: "Thumbnail from LEGO City Train Crashes number two", url: "https://www.youtube.com/watch?v=fIOEzxcv-cM" },
+    { platform: "YouTube", icon: "youtube", format: "video", title: "LEGO City Train Crashes #04", views: 127235, image: "assets/photos/popular-youtube-fhl549llpn0-960.webp", alt: "Thumbnail from LEGO City Train Crashes number four", url: "https://www.youtube.com/watch?v=fHL549lLpn0" }
   ],
 
   socials: [
@@ -432,59 +432,85 @@ function renderPartners() {
 
 function renderPopular() {
   const entries = CONFIG.popularVideos
-    .filter((item) => item.platform && item.title && Number.isFinite(item.views) && item.image && item.alt && validWebUrl(item.url))
-    .sort((a, b) => b.views - a.views)
-    .slice(0, 10);
+    .filter((item) => item.platform && item.title && ["video", "reel"].includes(item.format) && Number.isFinite(item.views) && item.image && item.alt && validWebUrl(item.url))
+    .sort((a, b) => b.views - a.views);
   if (!entries.length) return;
 
   const section = document.querySelector("#popular");
   const container = document.querySelector("#popular-grid");
+  const filters = document.querySelector("#popular-filters");
   const numberFormat = new Intl.NumberFormat("en-US");
 
-  entries.forEach((item, index) => {
-    const link = document.createElement("a");
-    link.className = "popular-card" + (index === 0 ? " popular-card-lead" : "");
-    link.href = item.url;
-    link.setAttribute("aria-label", "Number " + (index + 1) + ": " + item.title + " on " + item.platform + ", " + numberFormat.format(item.views) + " views");
-    externalLinkAttributes(link);
-
+  const makeImage = (item, index, className, decorative = false) => {
     const image = document.createElement("img");
+    image.className = className;
     image.src = item.image;
     if (item.image.endsWith("-960.webp")) {
       image.srcset = item.image + " 960w, " + item.image.replace("-960.webp", "-1600.webp") + " 1600w";
       image.sizes = index === 0 ? "(min-width: 800px) 58vw, 100vw" : "(min-width: 800px) 28vw, 100vw";
     }
-    image.alt = item.alt;
+    image.alt = decorative ? "" : item.alt;
     image.loading = index < 2 ? "eager" : "lazy";
     image.decoding = "async";
+    if (decorative) image.setAttribute("aria-hidden", "true");
+    return image;
+  };
 
-    const shade = document.createElement("span");
-    shade.className = "popular-shade";
-    const rank = document.createElement("span");
-    rank.className = "popular-rank";
-    rank.textContent = String(index + 1).padStart(2, "0");
+  const draw = (filter = "all") => {
+    const visible = entries.filter((item) => filter === "all" || item.format === filter).slice(0, 10);
+    container.replaceChildren();
 
-    const content = document.createElement("span");
-    content.className = "popular-content";
-    const platform = document.createElement("span");
-    platform.className = "popular-platform";
-    const icon = document.createElement("span");
-    icon.innerHTML = ICONS[item.icon] || "";
-    const platformName = document.createElement("span");
-    platformName.textContent = item.platform;
-    platform.append(icon, platformName);
+    visible.forEach((item, index) => {
+      const link = document.createElement("a");
+      link.className = "popular-card popular-card-" + item.format + (index === 0 ? " popular-card-lead" : "");
+      link.href = item.url;
+      link.setAttribute("aria-label", "Number " + (index + 1) + ": " + item.title + " on " + item.platform + ", " + numberFormat.format(item.views) + " views");
+      externalLinkAttributes(link);
 
-    const title = document.createElement("strong");
-    title.className = "popular-title";
-    title.textContent = item.title;
-    const views = document.createElement("span");
-    views.className = "popular-views";
-    views.textContent = numberFormat.format(item.views) + " views";
+      if (item.format === "reel") link.append(makeImage(item, index, "popular-backdrop", true));
+      link.append(makeImage(item, index, "popular-image"));
 
-    content.append(platform, title, views);
-    link.append(image, shade, rank, content);
-    container.append(link);
+      const shade = document.createElement("span");
+      shade.className = "popular-shade";
+      const rank = document.createElement("span");
+      rank.className = "popular-rank";
+      rank.textContent = String(index + 1).padStart(2, "0");
+
+      const content = document.createElement("span");
+      content.className = "popular-content";
+      const platform = document.createElement("span");
+      platform.className = "popular-platform";
+      const icon = document.createElement("span");
+      icon.innerHTML = ICONS[item.icon] || "";
+      const platformName = document.createElement("span");
+      platformName.textContent = item.platform;
+      platform.append(icon, platformName);
+
+      const title = document.createElement("strong");
+      title.className = "popular-title";
+      title.textContent = item.title;
+      const views = document.createElement("span");
+      views.className = "popular-views";
+      views.textContent = numberFormat.format(item.views) + " views";
+
+      content.append(platform, title, views);
+      link.append(shade, rank, content);
+      container.append(link);
+    });
+  };
+
+  filters.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-popular-filter]");
+    if (!button) return;
+    filters.querySelectorAll("[data-popular-filter]").forEach((candidate) => {
+      const active = candidate === button;
+      candidate.classList.toggle("is-active", active);
+      candidate.setAttribute("aria-pressed", String(active));
+    });
+    draw(button.dataset.popularFilter);
   });
+
+  draw();
 
   const snapshot = document.querySelector("#popular-snapshot");
   snapshot.textContent = "View-count snapshot: " + CONFIG.popularSnapshot + ". Counts change continuously and are refreshed manually.";

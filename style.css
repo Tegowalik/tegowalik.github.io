@@ -768,6 +768,22 @@ footer {
 /* Cross-platform view-count snapshot */
 .popular-section { padding: 0 0 clamp(5rem, 11vw, 9rem); }
 .popular-heading { max-width: 46rem; }
+.popular-filters { display: flex; flex-wrap: wrap; gap: .45rem; margin: -1rem 0 1.25rem; }
+.popular-filter {
+  min-height: 2.55rem;
+  padding: .55rem .95rem;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  font-size: .78rem;
+  font-weight: 800;
+  transition: color .2s ease, background .2s ease, border-color .2s ease;
+}
+.popular-filter:hover { color: var(--text); border-color: #62676e; }
+.popular-filter.is-active { color: var(--dark); background: var(--accent); border-color: var(--accent); }
 .popular-grid { display: grid; gap: .75rem; }
 
 .popular-card {
@@ -785,8 +801,12 @@ footer {
 }
 
 .popular-card:hover { transform: translateY(-3px); border-color: #62676e; }
-.popular-card img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
-.popular-card:hover img { transform: scale(1.025); }
+.popular-card img { position: absolute; inset: 0; width: 100%; height: 100%; transition: transform .45s ease; }
+.popular-image { z-index: -2; object-fit: cover; }
+.popular-card-reel .popular-image { object-fit: contain; }
+.popular-backdrop { z-index: -3; object-fit: cover; filter: blur(1.15rem) brightness(.5) saturate(.9); transform: scale(1.1); }
+.popular-card:hover .popular-image { transform: scale(1.025); }
+.popular-card-reel:hover .popular-backdrop { transform: scale(1.13); }
 .popular-shade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, rgba(4, 5, 6, .95), rgba(4, 5, 6, .08) 76%); }
 .popular-rank {
   position: absolute;
