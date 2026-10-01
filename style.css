@@ -76,6 +76,23 @@ footer {
   align-items: center;
 }
 
+.header-actions,
+.header-socials { display: flex; align-items: center; }
+.header-actions { gap: .85rem; }
+.header-socials { gap: .28rem; }
+.header-socials a {
+  width: 2.15rem;
+  height: 2.15rem;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: color .2s ease, background .2s ease;
+}
+.header-socials a:hover { color: var(--text); background: var(--surface); }
+.header-socials svg { width: 1.05rem; height: 1.05rem; fill: currentColor; }
+
 .nav-link {
   padding: .65rem .8rem;
   color: var(--muted);
@@ -279,7 +296,7 @@ footer { color: var(--muted); }
 .social-card {
   min-height: 5.8rem;
   display: grid;
-  grid-template-columns: 2.8rem minmax(0, 1fr) auto auto;
+  grid-template-columns: 2.8rem minmax(0, 1fr) auto;
   gap: 1rem;
   align-items: center;
   padding: 1rem 1.1rem;
@@ -296,12 +313,10 @@ footer { color: var(--muted); }
 .social-meta { min-width: 0; }
 .social-name { display: block; font-weight: 800; }
 .social-handle { display: block; color: var(--muted); font-size: .82rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.social-audience { color: var(--accent); font-size: .76rem; font-weight: 850; white-space: nowrap; }
 .arrow { color: var(--muted); font-size: 1.25rem; }
 
 @media (max-width: 420px) {
   .social-card { gap: .7rem; padding-inline: .85rem; }
-  .social-audience { font-size: .7rem; }
 }
 
 .affiliate-note {
@@ -682,7 +697,7 @@ footer {
   display: flex;
   align-items: flex-end;
   padding: clamp(3.5rem, 9vw, 7.5rem) clamp(1.25rem, 6vw, 5.25rem);
-  margin-bottom: clamp(4.5rem, 9vw, 8rem);
+  margin-bottom: clamp(1.25rem, 3vw, 2.25rem);
   border: 1px solid var(--line);
   border-radius: clamp(1.25rem, 3vw, 2.2rem);
   isolation: isolate;
@@ -779,6 +794,38 @@ footer {
 .hero-stats dt { color: #fff; font-size: clamp(1.45rem, 3vw, 2.1rem); font-weight: 900; letter-spacing: -.055em; }
 .hero-stats dd { margin: .05rem 0 0; color: #bbbcb9; text-transform: uppercase; font-size: .62rem; font-weight: 800; letter-spacing: .12em; }
 
+.audience-section {
+  display: grid;
+  gap: 1.25rem;
+  padding: 1.35rem;
+  margin-bottom: clamp(4.5rem, 9vw, 8rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.audience-heading h2 { margin: 0; font-size: clamp(1.45rem, 3vw, 2rem); }
+.audience-heading .eyebrow { margin-bottom: .35rem; }
+.audience-grid { display: grid; gap: .65rem; }
+.audience-stat {
+  min-height: 5.2rem;
+  display: flex;
+  gap: .9rem;
+  align-items: center;
+  padding: 1rem;
+  color: var(--text);
+  background: #111316;
+  border: 1px solid var(--line);
+  border-radius: .9rem;
+  text-decoration: none;
+  transition: transform .2s ease, border-color .2s ease;
+}
+.audience-stat:hover { transform: translateY(-2px); border-color: #5b6068; }
+.audience-icon { width: 2.2rem; height: 2.2rem; display: grid; place-items: center; color: var(--accent); }
+.audience-icon svg { width: 1.45rem; height: 1.45rem; fill: currentColor; }
+.audience-copy { display: flex; flex-direction: column; }
+.audience-copy strong { font-size: clamp(1.55rem, 3vw, 2.15rem); line-height: 1; letter-spacing: -.05em; }
+.audience-copy > span { margin-top: .25rem; color: var(--muted); text-transform: uppercase; font-size: .58rem; font-weight: 800; letter-spacing: .09em; }
+
 /* Cross-platform view-count snapshot */
 .popular-section { padding: 0 0 clamp(5rem, 11vw, 9rem); }
 .popular-heading { max-width: 46rem; }
@@ -852,6 +899,8 @@ footer {
   }
 
   .popular-grid { grid-template-columns: repeat(2, 1fr); }
+  .audience-section { grid-template-columns: minmax(12rem, .75fr) 2.25fr; align-items: center; padding: 1.6rem; }
+  .audience-grid { grid-template-columns: repeat(3, 1fr); }
   .popular-card-lead { grid-column: 1 / -1; min-height: 25rem; }
   .popular-card-lead .popular-title { font-size: clamp(1.5rem, 3vw, 2.2rem); }
   .popular-card-lead .popular-views { font-size: 1rem; }
@@ -872,4 +921,7 @@ footer {
   .hero-stats div { flex: 1; min-width: 0; }
   .hero-stats div:not(:first-child) { padding-right: 0; }
   .hero-stats dd { font-size: .52rem; letter-spacing: .08em; }
+  .header-actions { gap: .25rem; }
+  .header-socials { gap: 0; }
+  .header-cta { display: none; }
 }

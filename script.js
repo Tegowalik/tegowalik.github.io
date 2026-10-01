@@ -44,9 +44,9 @@ const CONFIG = {
   ],
 
   socials: [
-    { name: "YouTube", handle: "@Tegowalik", url: "https://www.youtube.com/@Tegowalik", icon: "youtube", audience: "7.47K subscribers", audienceCount: 7470, audienceMetric: "subscribers" },
-    { name: "Instagram", handle: "@tegowalik", url: "https://www.instagram.com/tegowalik", icon: "instagram", audience: "2,325 followers", audienceCount: 2325, audienceMetric: "followers" },
-    { name: "TikTok", handle: "@tegowalik", url: "https://www.tiktok.com/@tegowalik", icon: "tiktok", audience: "4,644 followers", audienceCount: 4644, audienceMetric: "followers" },
+    { name: "YouTube", handle: "@Tegowalik", url: "https://www.youtube.com/@Tegowalik", icon: "youtube", audience: "7.5K subscribers", audienceCount: 7470, audienceMetric: "subscribers" },
+    { name: "Instagram", handle: "@tegowalik", url: "https://www.instagram.com/tegowalik", icon: "instagram", audience: "2.3K followers", audienceCount: 2325, audienceMetric: "followers" },
+    { name: "TikTok", handle: "@tegowalik", url: "https://www.tiktok.com/@tegowalik", icon: "tiktok", audience: "4.6K followers", audienceCount: 4644, audienceMetric: "followers" },
     { name: "GitHub", handle: "@Tegowalik", url: "https://github.com/Tegowalik", icon: "github" }
   ],
 
@@ -308,7 +308,7 @@ function renderSocials() {
     const link = document.createElement("a");
     link.className = "social-card";
     link.href = item.url;
-    link.setAttribute("aria-label", `Open ${item.name}: ${item.handle}${item.audience ? `, ${item.audience}` : ""}`);
+    link.setAttribute("aria-label", `Open ${item.name}: ${item.handle}`);
     externalLinkAttributes(link);
 
     const icon = document.createElement("span");
@@ -325,22 +325,45 @@ function renderSocials() {
     handle.textContent = item.handle;
     meta.append(name, handle);
 
-    let audience;
-    if (item.audience && Number.isFinite(item.audienceCount)) {
-      audience = document.createElement("span");
-      audience.className = "social-audience";
-      audience.textContent = item.audience;
-    }
-
     const arrow = document.createElement("span");
     arrow.className = "arrow";
     arrow.setAttribute("aria-hidden", "true");
     arrow.textContent = "↗";
-    link.append(icon, meta);
-    if (audience) link.append(audience);
-    link.append(arrow);
+    link.append(icon, meta, arrow);
     container.append(link);
   });
+}
+
+function renderAudienceStats() {
+  const entries = CONFIG.socials.filter((item) =>
+    ["youtube", "instagram", "tiktok"].includes(item.icon) && Number.isFinite(item.audienceCount) && validWebUrl(item.url)
+  );
+  if (!entries.length) return;
+
+  const section = document.querySelector("#audience");
+  const container = document.querySelector("#audience-stats");
+  const compact = new Intl.NumberFormat("en-US", { notation: "compact", maximumFractionDigits: 1 });
+  entries.forEach((item) => {
+    const link = document.createElement("a");
+    link.className = "audience-stat";
+    link.href = item.url;
+    link.setAttribute("aria-label", `${compact.format(item.audienceCount)} ${item.audienceMetric} on ${item.name}`);
+    externalLinkAttributes(link);
+
+    const icon = document.createElement("span");
+    icon.className = "audience-icon";
+    icon.innerHTML = ICONS[item.icon] || "";
+    const copy = document.createElement("span");
+    copy.className = "audience-copy";
+    const count = document.createElement("strong");
+    count.textContent = compact.format(item.audienceCount);
+    const label = document.createElement("span");
+    label.textContent = `${item.name} ${item.audienceMetric}`;
+    copy.append(count, label);
+    link.append(icon, copy);
+    container.append(link);
+  });
+  section.hidden = false;
 }
 
 function copyText(value, button) {
@@ -697,6 +720,7 @@ function renderBusiness() {
 }
 
 renderProfile();
+renderAudienceStats();
 renderPartners();
 renderPopular();
 renderProjects();

@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const scriptPath = path.join(root, "script.js");
 const statsPath = path.join(root, "data", "social-stats.json");
-const numberFormat = new Intl.NumberFormat("en-US");
+const compactFormat = new Intl.NumberFormat("en-US", { notation: "compact", maximumFractionDigits: 1 });
 
 async function get(url, headers = {}) {
   const response = await fetch(url, {
@@ -35,14 +35,14 @@ async function collectYouTube() {
   const compact = match[1].replace(/\s+subscribers$/i, "").replace(/\s+/g, "");
   const count = parseCompact(compact);
   if (!Number.isFinite(count)) throw new Error("Subscriber count could not be parsed");
-  return { platform: "YouTube", count, display: `${compact} subscribers`, metric: "subscribers", source: "Public YouTube channel header" };
+  return { platform: "YouTube", count, display: `${compactFormat.format(count)} subscribers`, metric: "subscribers", source: "Public YouTube channel header" };
 }
 
 async function collectTikTok() {
   const data = await (await get("https://tokgauge.com/api/users/tegowalik?live=1")).json();
   const count = Number(data.card?.followers);
   if (!Number.isFinite(count)) throw new Error("Follower count not found in public TikTok profile data");
-  return { platform: "TikTok", count, display: `${numberFormat.format(count)} followers`, metric: "followers", source: "Public TikTok profile data" };
+  return { platform: "TikTok", count, display: `${compactFormat.format(count)} followers`, metric: "followers", source: "Public TikTok profile data" };
 }
 
 function instagramCount(data) {
@@ -58,7 +58,7 @@ async function collectInstagram() {
   })).json();
   const count = instagramCount(data);
   if (!Number.isFinite(count)) throw new Error("Follower count not found in public Instagram profile data");
-  return { platform: "Instagram", count, display: `${numberFormat.format(count)} followers`, metric: "followers", source: "Public Instagram profile data" };
+  return { platform: "Instagram", count, display: `${compactFormat.format(count)} followers`, metric: "followers", source: "Public Instagram profile data" };
 }
 
 function currentSocials(source) {
@@ -94,7 +94,7 @@ for (const [platform, collector] of [["YouTube", collectYouTube], ["Instagram", 
   } catch (error) {
     const fallback = previous.get(platform);
     if (!fallback) throw new Error(`${platform} failed and has no verified fallback: ${error.message}`);
-    collected.set(platform, { ...fallback, status: "retained" });
+    collected.set(platform, { ...fallback, display: `${compactFormat.format(fallback.count)} ${fallback.metric}`, status: "retained" });
     coverage[platform] = { status: "retained", error: String(error.message || error) };
   }
 }

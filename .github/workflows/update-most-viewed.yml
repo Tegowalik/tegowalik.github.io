@@ -1,4 +1,4 @@
-name: Update website stats
+name: Update most-viewed videos
 
 on:
   workflow_dispatch:
@@ -22,20 +22,16 @@ jobs:
           node-version: 22
       - name: Refresh rankings and previews
         run: node scripts/update-most-viewed.mjs
-      - name: Refresh follower and subscriber counts
-        run: node scripts/update-social-stats.mjs
       - name: Validate JavaScript and generated assets
         run: |
           node --check script.js
           node --check scripts/update-most-viewed.mjs
-          node --check scripts/update-social-stats.mjs
           git diff --check
           node -e 'const fs=require("fs");const a=JSON.parse(fs.readFileSync("data/most-viewed-audit.json"));for(const list of Object.values(a.rankings)){if(list.some((x,i)=>i&&list[i-1].views<x.views))throw Error("Ranking is not descending");for(const x of list)if(!fs.existsSync(x.image))throw Error("Missing "+x.image)}'
-          node -e 'const a=require("./data/social-stats.json");for(const name of ["YouTube","Instagram","TikTok"]){const x=a.entries.find(e=>e.platform===name);if(!x||!Number.isFinite(x.count)||x.count<=0)throw Error("Missing "+name+" audience count")}'
       - name: Commit changes when the snapshot moved
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add script.js data/most-viewed-audit.json data/social-stats.json assets/photos
-          git diff --cached --quiet || git commit -m "Update website statistics"
+          git add script.js data/most-viewed-audit.json assets/photos
+          git diff --cached --quiet || git commit -m "Update most-viewed video snapshot"
           git push
