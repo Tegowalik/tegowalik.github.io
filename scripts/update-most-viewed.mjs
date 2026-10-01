@@ -8,6 +8,7 @@ import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const scriptPath = path.join(root, "script.js");
 const auditPath = path.join(root, "data", "most-viewed-audit.json");
+const curatedPath = path.join(root, "data", "most-viewed-curated.json");
 const photoDir = path.join(root, "assets", "photos");
 const topCount = 10;
 
@@ -292,6 +293,7 @@ function updateConfig(source, date, items) {
 
 const source = fs.readFileSync(scriptPath, "utf8");
 const previous = currentEntries(source);
+const curated = fs.existsSync(curatedPath) ? JSON.parse(fs.readFileSync(curatedPath, "utf8")) : [];
 const coverage = {};
 const fresh = [];
 
@@ -307,7 +309,8 @@ for (const [platform, collect] of [["YouTube", () => collectYouTube(previousYouT
   }
 }
 
-const merged = mergeFreshWithPrevious(previous, dedupe(fresh));
+const baseline = dedupe([...previous, ...curated]);
+const merged = mergeFreshWithPrevious(baseline, dedupe(fresh));
 const selected = [];
 for (const item of selectedUnion(merged)) {
   try {
@@ -328,6 +331,7 @@ fs.mkdirSync(path.dirname(auditPath), { recursive: true });
 fs.writeFileSync(auditPath, JSON.stringify({
   generatedAt: new Date().toISOString(),
   policy: "Publicly available platform data is merged with the last verified snapshot; incomplete platform coverage does not block an update.",
+  curatedCandidates: curated.map(({ thumbnailUrl, ...item }) => item),
   coverage,
   rankings: { all: ranking(), videos: ranking("video"), reels: ranking("reel") },
 }, null, 2) + "\n");

@@ -46,7 +46,7 @@ Run the same reusable updater locally with:
 node scripts/update-most-viewed.mjs
 ```
 
-The updater collects public YouTube, TikTok, and Instagram data, keeps the last verified rows when a platform exposes only partial public data, produces local 960 px and 1600 px previews, updates `script.js`, and writes machine-readable coverage details to `data/most-viewed-audit.json`. Public-data gaps never block the scheduled update and are not shown as website copy.
+The updater collects public YouTube, TikTok, and Instagram data, merges dated creator-verified rows from `data/most-viewed-curated.json`, keeps the last verified rows when a platform exposes only partial public data, produces local 960 px and 1600 px previews, updates `script.js`, and writes machine-readable coverage details to `data/most-viewed-audit.json`. Public-data gaps never block the scheduled update and are not shown as website copy.
 
 ## Change text
 

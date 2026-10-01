@@ -1,9 +1,50 @@
 {
-  "generatedAt": "2026-10-01T10:47:13.744Z",
+  "generatedAt": "2026-10-01T11:19:48.377Z",
   "policy": "Publicly available platform data is merged with the last verified snapshot; incomplete platform coverage does not block an update.",
+  "curatedCandidates": [
+    {
+      "platform": "Instagram",
+      "icon": "instagram",
+      "format": "reel",
+      "id": "DTm-xtZDJ0s",
+      "title": "Gigantic LEGO Train Crossing",
+      "views": 622000,
+      "image": "assets/photos/instagram-dtm-xtzdj0s-960.webp",
+      "alt": "Instagram Reel cover showing trains crossing a gigantic multi-direction LEGO railway junction",
+      "url": "https://www.instagram.com/reel/DTm-xtZDJ0s/",
+      "verifiedAt": "2026-10-01",
+      "verification": "Creator profile screenshot"
+    },
+    {
+      "platform": "Instagram",
+      "icon": "instagram",
+      "format": "reel",
+      "id": "DcDWiUlAE3X",
+      "title": "A Giant Moving LEGO Train Elevator",
+      "views": 70400,
+      "image": "assets/photos/instagram-dcdwiulae3x-960.webp",
+      "alt": "Instagram Reel cover showing the multi-level LEGO train elevator",
+      "url": "https://www.instagram.com/reel/DcDWiUlAE3X/",
+      "verifiedAt": "2026-10-01",
+      "verification": "Creator profile screenshot"
+    },
+    {
+      "platform": "Instagram",
+      "icon": "instagram",
+      "format": "reel",
+      "id": "DcVrQogKNjT",
+      "title": "200 m LEGO Train Track Through the Garden",
+      "views": 85700,
+      "image": "assets/photos/instagram-dcvrqogknjt-960.webp",
+      "alt": "Instagram Reel cover showing a LEGO railway bridge crossing a swimming pool",
+      "url": "https://www.instagram.com/reel/DcVrQogKNjT/",
+      "verifiedAt": "2026-10-01",
+      "verification": "Creator profile screenshot"
+    }
+  ],
   "coverage": {
     "YouTube": {
-      "collectedVideos": 76
+      "collectedVideos": 66
     },
     "TikTok": {
       "profileVideos": 125,
@@ -52,6 +93,19 @@
         "id": "QWWF9u0q5Ek"
       },
       {
+        "platform": "Instagram",
+        "icon": "instagram",
+        "format": "reel",
+        "id": "DTm-xtZDJ0s",
+        "title": "Gigantic LEGO Train Crossing",
+        "views": 622000,
+        "image": "assets/photos/instagram-dtm-xtzdj0s-960.webp",
+        "alt": "Instagram Reel cover showing trains crossing a gigantic multi-direction LEGO railway junction",
+        "url": "https://www.instagram.com/reel/DTm-xtZDJ0s/",
+        "verifiedAt": "2026-10-01",
+        "verification": "Creator profile screenshot"
+      },
+      {
         "platform": "YouTube",
         "icon": "youtube",
         "format": "video",
@@ -67,7 +121,7 @@
         "icon": "youtube",
         "format": "video",
         "title": "15 Trains, 400 m Track & a Multi-Level Suspension Bridge",
-        "views": 360826,
+        "views": 360814,
         "image": "assets/photos/popular-youtube-rmniqbdii-m-960.webp",
         "alt": "Thumbnail from the 15-train and 400-metre track setup video",
         "url": "https://www.youtube.com/watch?v=RmNIQbDIi-M",
@@ -78,7 +132,7 @@
         "icon": "youtube",
         "format": "reel",
         "title": "That Was Not Planned",
-        "views": 280262,
+        "views": 280570,
         "image": "assets/photos/popular-youtube-pyrkogbojpw-960.webp",
         "alt": "Thumbnail from the LEGO train crash short That Was Not Planned",
         "url": "https://www.youtube.com/watch?v=PyRkOgBOJPw",
@@ -116,17 +170,6 @@
         "alt": "Thumbnail from LEGO City Train Crashes number three",
         "url": "https://www.youtube.com/watch?v=2slQXb5EGVo",
         "id": "2slQXb5EGVo"
-      },
-      {
-        "platform": "YouTube",
-        "icon": "youtube",
-        "format": "video",
-        "title": "LEGO City Train Crashes #02",
-        "views": 138506,
-        "image": "assets/photos/popular-youtube-fioezxcv-cm-960.webp",
-        "alt": "Thumbnail from LEGO City Train Crashes number two",
-        "url": "https://www.youtube.com/watch?v=fIOEzxcv-cM",
-        "id": "fIOEzxcv-cM"
       }
     ],
     "videos": [
@@ -157,7 +200,7 @@
         "icon": "youtube",
         "format": "video",
         "title": "15 Trains, 400 m Track & a Multi-Level Suspension Bridge",
-        "views": 360826,
+        "views": 360814,
         "image": "assets/photos/popular-youtube-rmniqbdii-m-960.webp",
         "alt": "Thumbnail from the 15-train and 400-metre track setup video",
         "url": "https://www.youtube.com/watch?v=RmNIQbDIi-M",
@@ -212,7 +255,7 @@
         "icon": "youtube",
         "format": "video",
         "title": "LEGO Train Crash Compilation #05 | Massive Crashes with up to 8 Trains",
-        "views": 100642,
+        "views": 100638,
         "image": "assets/photos/popular-youtube-gm21nvfa4dw-960.webp",
         "alt": "Preview image from LEGO Train Crash Compilation #05 | Massive Crashes with up to 8 Trains",
         "url": "https://www.youtube.com/watch?v=Gm21NvFA4Dw",
@@ -232,13 +275,13 @@
       {
         "platform": "YouTube",
         "icon": "youtube",
-        "id": "SmDAyCk9kB4",
         "format": "video",
         "title": "LEGO Train Track Setup with switch control by EV3 #01",
-        "views": 28936,
-        "url": "https://www.youtube.com/watch?v=SmDAyCk9kB4",
+        "views": 28937,
         "image": "assets/photos/popular-youtube-smdayck9kb4-960.webp",
-        "alt": "Preview image from LEGO Train Track Setup with switch control by EV3 #01"
+        "alt": "Preview image from LEGO Train Track Setup with switch control by EV3 #01",
+        "url": "https://www.youtube.com/watch?v=SmDAyCk9kB4",
+        "id": "SmDAyCk9kB4"
       }
     ],
     "reels": [
@@ -265,11 +308,24 @@
         "id": "QWWF9u0q5Ek"
       },
       {
+        "platform": "Instagram",
+        "icon": "instagram",
+        "format": "reel",
+        "id": "DTm-xtZDJ0s",
+        "title": "Gigantic LEGO Train Crossing",
+        "views": 622000,
+        "image": "assets/photos/instagram-dtm-xtzdj0s-960.webp",
+        "alt": "Instagram Reel cover showing trains crossing a gigantic multi-direction LEGO railway junction",
+        "url": "https://www.instagram.com/reel/DTm-xtZDJ0s/",
+        "verifiedAt": "2026-10-01",
+        "verification": "Creator profile screenshot"
+      },
+      {
         "platform": "YouTube",
         "icon": "youtube",
         "format": "reel",
         "title": "That Was Not Planned",
-        "views": 280262,
+        "views": 280570,
         "image": "assets/photos/popular-youtube-pyrkogbojpw-960.webp",
         "alt": "Thumbnail from the LEGO train crash short That Was Not Planned",
         "url": "https://www.youtube.com/watch?v=PyRkOgBOJPw",
@@ -298,10 +354,36 @@
         "id": "7440394892691410198"
       },
       {
+        "platform": "Instagram",
+        "icon": "instagram",
+        "format": "reel",
+        "id": "DcVrQogKNjT",
+        "title": "200 m LEGO Train Track Through the Garden",
+        "views": 85700,
+        "image": "assets/photos/instagram-dcvrqogknjt-960.webp",
+        "alt": "Instagram Reel cover showing a LEGO railway bridge crossing a swimming pool",
+        "url": "https://www.instagram.com/reel/DcVrQogKNjT/",
+        "verifiedAt": "2026-10-01",
+        "verification": "Creator profile screenshot"
+      },
+      {
+        "platform": "Instagram",
+        "icon": "instagram",
+        "format": "reel",
+        "id": "DcDWiUlAE3X",
+        "title": "A Giant Moving LEGO Train Elevator",
+        "views": 70400,
+        "image": "assets/photos/instagram-dcdwiulae3x-960.webp",
+        "alt": "Instagram Reel cover showing the multi-level LEGO train elevator",
+        "url": "https://www.instagram.com/reel/DcDWiUlAE3X/",
+        "verifiedAt": "2026-10-01",
+        "verification": "Creator profile screenshot"
+      },
+      {
         "platform": "YouTube",
         "icon": "youtube",
         "format": "reel",
-        "title": "Long LEGO Trains drive through a Gigantic LEGO Train Track Setup #tegowalik #lego #trixbrix",
+        "title": "Long LEGO Trains drive through a Gigantic LEGO Train Track Setup",
         "views": 30327,
         "image": "assets/photos/popular-youtube-pnb4va-saty-960.webp",
         "alt": "Preview image from Long LEGO Trains drive through a Gigantic LEGO Train Track Setup #tegowalik #lego #trixbrix",
@@ -312,45 +394,12 @@
         "platform": "YouTube",
         "icon": "youtube",
         "format": "reel",
-        "title": "LEGO Train derails #lego #pov #crash #bluebrixx #db",
+        "title": "LEGO Train derails",
         "views": 23385,
         "image": "assets/photos/popular-youtube-ncmjqucffp4-960.webp",
         "alt": "Preview image from LEGO Train derails #lego #pov #crash #bluebrixx #db",
         "url": "https://www.youtube.com/watch?v=NCMJQucfFp4",
         "id": "NCMJQucfFp4"
-      },
-      {
-        "platform": "YouTube",
-        "icon": "youtube",
-        "format": "reel",
-        "title": "LEGO Train Crash #lego #legotrain #crash",
-        "views": 12898,
-        "image": "assets/photos/popular-youtube-jrpy7selojy-960.webp",
-        "alt": "Preview image from LEGO Train Crash #lego #legotrain #crash",
-        "url": "https://www.youtube.com/watch?v=jrpY7SelOjY",
-        "id": "jrpY7SelOjY"
-      },
-      {
-        "platform": "YouTube",
-        "icon": "youtube",
-        "format": "reel",
-        "title": "Have you ever seen a larger LEGO Train Track Setup before?",
-        "views": 9924,
-        "image": "assets/photos/popular-youtube-zd3hsyaal34-960.webp",
-        "alt": "Preview image from Have you ever seen a larger LEGO Train Track Setup before?",
-        "url": "https://www.youtube.com/watch?v=zd3HSYAAl34",
-        "id": "zd3HSYAAl34"
-      },
-      {
-        "platform": "YouTube",
-        "icon": "youtube",
-        "format": "reel",
-        "title": "LEGO Trains driving over a Gigantic Crossing | LEGO Train Track Setup 2024 #02",
-        "views": 9671,
-        "image": "assets/photos/popular-youtube-y3ebvc845gw-960.webp",
-        "alt": "Preview image from LEGO Trains driving over a Gigantic Crossing | LEGO Train Track Setup 2024 #02",
-        "url": "https://www.youtube.com/watch?v=y3ebVc845gw",
-        "id": "y3ebVc845gw"
       }
     ]
   }
