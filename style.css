@@ -323,16 +323,7 @@ footer { color: var(--muted); }
 
 .project-card:hover { transform: translateY(-3px); border-color: #555a62; }
 
-.project-card > img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  display: block;
-  object-fit: cover;
-  border-bottom: 1px solid var(--line);
-  transition: transform .4s ease;
-}
-
-.project-card:hover > img { transform: scale(1.018); }
+.project-card:hover .card-media-image { transform: scale(1.018); }
 
 .project-content { flex: 1; display: flex; flex-direction: column; padding: 1.15rem; }
 .project-meta { color: var(--accent); text-transform: uppercase; font-size: .63rem; font-weight: 800; letter-spacing: .11em; }
@@ -497,15 +488,7 @@ footer {
   border-bottom: 1px solid var(--line);
 }
 
-.partner-image-link img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  display: block;
-  object-fit: cover;
-  transition: transform .4s ease;
-}
-
-.partner-card:hover .partner-image-link img { transform: scale(1.02); }
+.partner-card:hover .card-media-image { transform: scale(1.02); }
 
 .partner-body {
   flex: 1;
@@ -598,16 +581,41 @@ footer {
   padding: 0;
 }
 
-.resource-card > img {
+.resource-card:hover .card-media-image { transform: scale(1.018); }
+
+.card-media {
   width: 100%;
   aspect-ratio: 16 / 9;
+  position: relative;
+  overflow: hidden;
   display: block;
-  object-fit: cover;
+  flex: 0 0 auto;
+  background: #111316;
   border-bottom: 1px solid var(--line);
+  isolation: isolate;
+}
+
+.card-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
   transition: transform .4s ease;
 }
 
-.resource-card:hover > img { transform: scale(1.018); }
+.card-media-image { z-index: 1; object-fit: cover; }
+.card-media-backdrop { display: none; z-index: 0; object-fit: cover; }
+
+.card-media[data-aspect="portrait"] .card-media-image,
+.card-media[data-aspect="square"] .card-media-image { object-fit: contain; }
+
+.card-media[data-aspect="portrait"] .card-media-backdrop,
+.card-media[data-aspect="square"] .card-media-backdrop {
+  display: block;
+  filter: blur(1.1rem) brightness(.45) saturate(.8);
+  transform: scale(1.1);
+}
 
 .resource-content {
   flex: 1;

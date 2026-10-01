@@ -1,0 +1,36 @@
+name: Update most-viewed videos
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 5 * * 1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-most-viewed
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Refresh rankings and previews
+        run: node scripts/update-most-viewed.mjs
+      - name: Validate JavaScript and generated assets
+        run: |
+          node --check script.js
+          git diff --check
+          node -e 'const fs=require("fs");const a=JSON.parse(fs.readFileSync("data/most-viewed-audit.json"));for(const list of Object.values(a.rankings)){if(list.some((x,i)=>i&&list[i-1].views<x.views))throw Error("Ranking is not descending");for(const x of list)if(!fs.existsSync(x.image))throw Error("Missing "+x.image)}'
+      - name: Commit changes when the snapshot moved
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add script.js data/most-viewed-audit.json assets/photos
+          git diff --cached --quiet || git commit -m "Update most-viewed video snapshot"
+          git push

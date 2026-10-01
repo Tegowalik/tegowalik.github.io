@@ -19,18 +19,28 @@ const CONFIG = {
     alt: "A huge multi-level LEGO railway filling a room with trains, bridges, and a train elevator"
   },
 
-  popularSnapshot: "29 September 2026",
+  popularSnapshot: "1 October 2026",
   popularVideos: [
     { platform: "TikTok", icon: "tiktok", format: "reel", title: "Long LEGO Trains Through a Gigantic Track Setup", views: 1100000, image: "assets/photos/popular-tiktok-7515723242867264790-960.webp", alt: "Long LEGO trains running through a gigantic indoor track setup", url: "https://www.tiktok.com/@tegowalik/video/7515723242867264790" },
-    { platform: "YouTube", icon: "youtube", format: "video", title: "350 m Track, Large Bridges, Automated Switches & Station", views: 793875, image: "assets/photos/popular-youtube-citj504vehi-960.webp", alt: "Thumbnail from the 350 metre LEGO train track setup video", url: "https://www.youtube.com/watch?v=CItJ504veHI" },
-    { platform: "YouTube", icon: "youtube", format: "video", title: "LEGO Train Crashes #01", views: 561675, image: "assets/photos/popular-youtube-x1rfqrjjlto-960.webp", alt: "Thumbnail from LEGO City Train Crashes number one", url: "https://www.youtube.com/watch?v=x1rFqrJJlTo" },
-    { platform: "YouTube", icon: "youtube", format: "video", title: "15 Trains, 400 m Track & a Multi-Level Suspension Bridge", views: 359450, image: "assets/photos/popular-youtube-rmniqbdii-m-960.webp", alt: "Thumbnail from the 15-train and 400-metre track setup video", url: "https://www.youtube.com/watch?v=RmNIQbDIi-M" },
-    { platform: "YouTube", icon: "youtube", format: "reel", title: "That Was Not Planned", views: 263677, image: "assets/photos/popular-youtube-pyrkogbojpw-960.webp", alt: "Thumbnail from the LEGO train crash short That Was Not Planned", url: "https://www.youtube.com/watch?v=PyRkOgBOJPw" },
+    { platform: "YouTube", icon: "youtube", format: "video", title: "350 m Track, Large Bridges, Automated Switches & Station", views: 794032, image: "assets/photos/popular-youtube-citj504vehi-960.webp", alt: "Thumbnail from the 350 metre LEGO train track setup video", url: "https://www.youtube.com/watch?v=CItJ504veHI" },
+    { platform: "YouTube", icon: "youtube", format: "reel", title: "LEGO Train drives on a Gigantic Suspension Bridge", views: 647116, image: "assets/photos/popular-youtube-qwwf9u0q5ek-960.webp", alt: "Preview image from LEGO Train drives on a Gigantic Suspension Bridge", url: "https://www.youtube.com/watch?v=QWWF9u0q5Ek" },
+    { platform: "YouTube", icon: "youtube", format: "video", title: "LEGO City Train Crashes #01", views: 561753, image: "assets/photos/popular-youtube-x1rfqrjjlto-960.webp", alt: "Thumbnail from LEGO City Train Crashes number one", url: "https://www.youtube.com/watch?v=x1rFqrJJlTo" },
+    { platform: "YouTube", icon: "youtube", format: "video", title: "15 Trains, 400 m Track & a Multi-Level Suspension Bridge", views: 360826, image: "assets/photos/popular-youtube-rmniqbdii-m-960.webp", alt: "Thumbnail from the 15-train and 400-metre track setup video", url: "https://www.youtube.com/watch?v=RmNIQbDIi-M" },
+    { platform: "YouTube", icon: "youtube", format: "reel", title: "That Was Not Planned", views: 280262, image: "assets/photos/popular-youtube-pyrkogbojpw-960.webp", alt: "Thumbnail from the LEGO train crash short That Was Not Planned", url: "https://www.youtube.com/watch?v=PyRkOgBOJPw" },
     { platform: "TikTok", icon: "tiktok", format: "reel", title: "LEGO Train Crashes on a Bridge", views: 260800, image: "assets/photos/popular-tiktok-7492348795515063574-960.webp", alt: "Cover from the LEGO train bridge crash TikTok", url: "https://www.tiktok.com/@tegowalik/video/7492348795515063574" },
-    { platform: "YouTube", icon: "youtube", format: "video", title: "400 m Track, Train Elevator, Suspension Bridge & Automation", views: 225592, image: "assets/photos/popular-youtube-downk4egv6y-960.webp", alt: "Thumbnail from the 400-metre automated LEGO railway video", url: "https://www.youtube.com/watch?v=dowNK4egV6Y" },
-    { platform: "YouTube", icon: "youtube", format: "video", title: "LEGO City Train Crashes #03", views: 217669, image: "assets/photos/popular-youtube-2slqxb5egvo-960.webp", alt: "Thumbnail from LEGO City Train Crashes number three", url: "https://www.youtube.com/watch?v=2slQXb5EGVo" },
-    { platform: "YouTube", icon: "youtube", format: "video", title: "LEGO Train Crashes #02", views: 138406, image: "assets/photos/popular-youtube-fioezxcv-cm-960.webp", alt: "Thumbnail from LEGO City Train Crashes number two", url: "https://www.youtube.com/watch?v=fIOEzxcv-cM" },
-    { platform: "YouTube", icon: "youtube", format: "video", title: "LEGO City Train Crashes #04", views: 127235, image: "assets/photos/popular-youtube-fhl549llpn0-960.webp", alt: "Thumbnail from LEGO City Train Crashes number four", url: "https://www.youtube.com/watch?v=fHL549lLpn0" }
+    { platform: "YouTube", icon: "youtube", format: "video", title: "400 m Track, Train Elevator, Suspension Bridge & Automation", views: 225780, image: "assets/photos/popular-youtube-downk4egv6y-960.webp", alt: "Thumbnail from the 400-metre automated LEGO railway video", url: "https://www.youtube.com/watch?v=dowNK4egV6Y" },
+    { platform: "YouTube", icon: "youtube", format: "video", title: "LEGO City Train Crashes #03", views: 217809, image: "assets/photos/popular-youtube-2slqxb5egvo-960.webp", alt: "Thumbnail from LEGO City Train Crashes number three", url: "https://www.youtube.com/watch?v=2slQXb5EGVo" },
+    { platform: "YouTube", icon: "youtube", format: "video", title: "LEGO City Train Crashes #02", views: 138506, image: "assets/photos/popular-youtube-fioezxcv-cm-960.webp", alt: "Thumbnail from LEGO City Train Crashes number two", url: "https://www.youtube.com/watch?v=fIOEzxcv-cM" },
+    { platform: "YouTube", icon: "youtube", format: "video", title: "LEGO City Train Crashes #04", views: 127430, image: "assets/photos/popular-youtube-fhl549llpn0-960.webp", alt: "Thumbnail from LEGO City Train Crashes number four", url: "https://www.youtube.com/watch?v=fHL549lLpn0" },
+    { platform: "TikTok", icon: "tiktok", format: "reel", title: "A LEGO Train driving through a Gigantic LEGO Train Track Setup", views: 108400, image: "assets/photos/popular-tiktok-7440394892691410198-960.webp", alt: "Preview image from A LEGO Train driving through a Gigantic LEGO Train Track Setup", url: "https://www.tiktok.com/@tegowalik/video/7440394892691410198" },
+    { platform: "YouTube", icon: "youtube", format: "video", title: "LEGO Train Crash Compilation #05 | Massive Crashes with up to 8 Trains", views: 100642, image: "assets/photos/popular-youtube-gm21nvfa4dw-960.webp", alt: "Preview image from LEGO Train Crash Compilation #05 | Massive Crashes with up to 8 Trains", url: "https://www.youtube.com/watch?v=Gm21NvFA4Dw" },
+    { platform: "YouTube", icon: "youtube", format: "video", title: "My LEGO Train Spiral... CRASHED", views: 35854, image: "assets/photos/popular-youtube-pkzpcestbgi-960.webp", alt: "Preview image from My LEGO Train Spiral... CRASHED", url: "https://www.youtube.com/watch?v=PKzPCesTbgI" },
+    { platform: "YouTube", icon: "youtube", format: "reel", title: "Long LEGO Trains drive through a Gigantic LEGO Train Track Setup", views: 30327, image: "assets/photos/popular-youtube-pnb4va-saty-960.webp", alt: "Preview image from Long LEGO Trains drive through a Gigantic LEGO Train Track Setup #tegowalik #lego #trixbrix", url: "https://www.youtube.com/watch?v=PnB4vA-SATY" },
+    { platform: "YouTube", icon: "youtube", format: "video", title: "LEGO Train Track Setup with switch control by EV3 #01", views: 28936, image: "assets/photos/popular-youtube-smdayck9kb4-960.webp", alt: "Preview image from LEGO Train Track Setup with switch control by EV3 #01", url: "https://www.youtube.com/watch?v=SmDAyCk9kB4" },
+    { platform: "YouTube", icon: "youtube", format: "reel", title: "LEGO Train derails", views: 23385, image: "assets/photos/popular-youtube-ncmjqucffp4-960.webp", alt: "Preview image from LEGO Train derails #lego #pov #crash #bluebrixx #db", url: "https://www.youtube.com/watch?v=NCMJQucfFp4" },
+    { platform: "YouTube", icon: "youtube", format: "reel", title: "LEGO Train Crash", views: 12898, image: "assets/photos/popular-youtube-jrpy7selojy-960.webp", alt: "Preview image from LEGO Train Crash #lego #legotrain #crash", url: "https://www.youtube.com/watch?v=jrpY7SelOjY" },
+    { platform: "YouTube", icon: "youtube", format: "reel", title: "Have you ever seen a larger LEGO Train Track Setup before?", views: 9924, image: "assets/photos/popular-youtube-zd3hsyaal34-960.webp", alt: "Preview image from Have you ever seen a larger LEGO Train Track Setup before?", url: "https://www.youtube.com/watch?v=zd3HSYAAl34" },
+    { platform: "YouTube", icon: "youtube", format: "reel", title: "LEGO Trains driving over a Gigantic Crossing | LEGO Train Track Setup 2024 #02", views: 9671, image: "assets/photos/popular-youtube-y3ebvc845gw-960.webp", alt: "Preview image from LEGO Trains driving over a Gigantic Crossing | LEGO Train Track Setup 2024 #02", url: "https://www.youtube.com/watch?v=y3ebVc845gw" }
   ],
 
   socials: [
@@ -174,6 +184,13 @@ const CONFIG = {
       description: "A Factorio community thread featuring Tegowalik's dense multi-level LEGO railway.",
       cta: "Open the thread",
       url: "https://www.reddit.com/r/Factoriohno/comments/1qi1inf/need_help_with_signaling/"
+    },
+    {
+      publication: "TrixBrix",
+      title: "PRO Gallery",
+      description: "TrixBrix's PRO Gallery showcases large LEGO railway layouts built by Tegowalik.",
+      cta: "View the gallery",
+      url: "https://trixbrix.eu/en/gallery"
     }
   ],
 
@@ -354,6 +371,39 @@ function makeCopyButton(label, value) {
   return button;
 }
 
+function makeCardMedia(item, sizes) {
+  const media = document.createElement("span");
+  media.className = "card-media";
+
+  const makeImage = (className, decorative) => {
+    const image = document.createElement("img");
+    image.className = className;
+    image.src = item.image;
+    if (item.srcset || item.image.endsWith("-960.webp")) {
+      image.srcset = item.srcset || item.image + " 960w, " + item.image.replace("-960.webp", "-1600.webp") + " 1600w";
+      image.sizes = sizes;
+    }
+    image.alt = decorative ? "" : item.alt;
+    image.loading = "lazy";
+    image.decoding = "async";
+    image.width = 960;
+    image.height = 540;
+    if (decorative) image.setAttribute("aria-hidden", "true");
+    return image;
+  };
+
+  const backdrop = makeImage("card-media-backdrop", true);
+  const image = makeImage("card-media-image", false);
+  const classify = () => {
+    const ratio = image.naturalWidth / image.naturalHeight;
+    media.dataset.aspect = ratio < .85 ? "portrait" : ratio < 1.2 ? "square" : "landscape";
+  };
+  image.addEventListener("load", classify, { once: true });
+  if (image.complete) classify();
+  media.append(backdrop, image);
+  return media;
+}
+
 function renderPartners() {
   const entries = CONFIG.partners.filter((item) =>
     item.name && item.description && item.image && item.alt && item.cta && validWebUrl(item.url)
@@ -371,18 +421,7 @@ function renderPartners() {
     imageLink.href = item.url;
     imageLink.setAttribute("aria-label", "Open " + item.name + " partner link");
     externalLinkAttributes(imageLink, true);
-    const image = document.createElement("img");
-    image.src = item.image;
-    if (item.srcset || item.image.endsWith("-960.webp")) {
-      image.srcset = item.srcset || item.image + " 960w, " + item.image.replace("-960.webp", "-1600.webp") + " 1600w";
-      image.sizes = "(min-width: 1020px) 33vw, (min-width: 700px) 50vw, 100vw";
-    }
-    image.alt = item.alt;
-    image.loading = "lazy";
-    image.decoding = "async";
-    image.width = 960;
-    image.height = 540;
-    imageLink.append(image);
+    imageLink.append(makeCardMedia(item, "(min-width: 1020px) 33vw, (min-width: 700px) 50vw, 100vw"));
 
     const body = document.createElement("div");
     body.className = "partner-body";
@@ -513,7 +552,7 @@ function renderPopular() {
   draw();
 
   const snapshot = document.querySelector("#popular-snapshot");
-  snapshot.textContent = "View-count snapshot: " + CONFIG.popularSnapshot + ". Counts change continuously and are refreshed manually.";
+  snapshot.textContent = "View-count snapshot: " + CONFIG.popularSnapshot + ". Counts change continuously; this ranking is refreshed automatically from publicly available platform data.";
   section.hidden = false;
 }
 
@@ -530,18 +569,6 @@ function renderProjects() {
     link.className = "project-card";
     link.href = item.url;
     externalLinkAttributes(link);
-
-    const image = document.createElement("img");
-    image.src = item.image;
-    if (item.image.endsWith("-960.webp")) {
-      image.srcset = item.image + " 960w, " + item.image.replace("-960.webp", "-1600.webp") + " 1600w";
-      image.sizes = "(min-width: 1020px) 33vw, (min-width: 700px) 50vw, 100vw";
-    }
-    image.alt = item.alt;
-    image.loading = "lazy";
-    image.decoding = "async";
-    image.width = 1200;
-    image.height = 675;
 
     const content = document.createElement("span");
     content.className = "project-content";
@@ -560,7 +587,7 @@ function renderProjects() {
     cta.firstElementChild.textContent = item.cta;
 
     content.append(meta, title, description, cta);
-    link.append(image, content);
+    link.append(makeCardMedia(item, "(min-width: 1020px) 33vw, (min-width: 700px) 50vw, 100vw"), content);
     container.append(link);
   });
   section.hidden = false;
@@ -580,18 +607,6 @@ function renderResources() {
     link.href = item.url;
     externalLinkAttributes(link);
 
-    const image = document.createElement("img");
-    image.src = item.image;
-    if (item.image.endsWith("-960.webp")) {
-      image.srcset = item.image + " 960w, " + item.image.replace("-960.webp", "-1600.webp") + " 1600w";
-      image.sizes = "(min-width: 1020px) 33vw, (min-width: 700px) 50vw, 100vw";
-    }
-    image.alt = item.alt;
-    image.loading = "lazy";
-    image.decoding = "async";
-    image.width = 960;
-    image.height = 540;
-
     const content = document.createElement("span");
     content.className = "resource-content";
     const label = document.createElement("span");
@@ -609,7 +624,7 @@ function renderResources() {
     cta.firstElementChild.textContent = item.cta;
 
     content.append(label, title, description, cta);
-    link.append(image, content);
+    link.append(makeCardMedia(item, "(min-width: 1020px) 33vw, (min-width: 700px) 50vw, 100vw"), content);
     container.append(link);
   });
   section.hidden = false;

@@ -8,7 +8,7 @@ All editable page content is in the clearly marked `CONFIG` object at the top of
 
 - `profile` controls the name, page title, tagline, description, primary YouTube link, and business email.
 - `heroImage` controls the main image and its accessible description.
-- `popularSnapshot` and `popularVideos` control the dated cross-platform Top 10. Update the date and counts together; entries are sorted automatically.
+- `popularSnapshot` and `popularVideos` control the dated cross-platform rankings. They are refreshed automatically every Monday by `.github/workflows/update-most-viewed.yml`; the workflow can also be run manually in GitHub Actions.
 - `socials` controls the social profile cards.
 - `partners` controls affiliate and discount cards.
 - `projects` controls the featured signature projects.
@@ -37,6 +37,16 @@ Pass filenames after the two directories to process only selected images:
 It produces 960 px and 1600 px WebP variants with safe lowercase filenames. After adding images, reference the generated paths in any image-enabled `CONFIG` entry. Filenames ending in `-960.webp` automatically use their matching `-1600.webp` file as a responsive high-resolution source.
 
 For social sharing, replace `assets/share-card.jpg` with another 1200 × 630 image and keep both matching metadata paths in `index.html` aligned if the filename changes.
+
+## Refresh the most-watched rankings
+
+Run the same reusable updater locally with:
+
+```bash
+node scripts/update-most-viewed.mjs
+```
+
+The updater collects public YouTube, TikTok, and Instagram data, keeps the last verified rows when a platform exposes only partial public data, produces local 960 px and 1600 px previews, updates `script.js`, and writes machine-readable coverage details to `data/most-viewed-audit.json`. Public-data gaps never block the scheduled update and are not shown as website copy.
 
 ## Change text
 
