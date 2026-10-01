@@ -70,6 +70,24 @@ footer {
 
 .brand-logo { width: 2.2rem; height: 2.2rem; object-fit: contain; }
 
+.site-nav {
+  display: flex;
+  gap: .35rem;
+  align-items: center;
+}
+
+.nav-link {
+  padding: .65rem .8rem;
+  color: var(--muted);
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: .88rem;
+  font-weight: 700;
+}
+
+.nav-link:hover,
+.nav-link[aria-current="page"] { color: var(--text); background: var(--surface); }
+
 .header-cta {
   padding: .65rem 1rem;
   border: 1px solid var(--line);
@@ -81,6 +99,74 @@ footer {
 }
 
 .header-cta:hover { color: var(--text); border-color: #555a62; }
+
+.faq-hero {
+  max-width: 55rem;
+  padding: clamp(3.5rem, 9vw, 7rem) 0 clamp(3rem, 7vw, 5rem);
+}
+
+.faq-hero h1 { max-width: 12ch; }
+
+.faq-intro {
+  max-width: 43rem;
+  color: var(--muted);
+  font-size: clamp(1.05rem, 2vw, 1.22rem);
+}
+
+.faq-section { padding-bottom: clamp(5rem, 11vw, 9rem); }
+
+.faq-list {
+  border-top: 1px solid var(--line);
+}
+
+.faq-item { border-bottom: 1px solid var(--line); }
+
+.faq-item summary {
+  position: relative;
+  padding: 1.45rem 3rem 1.45rem 0;
+  cursor: pointer;
+  list-style: none;
+  font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+  font-weight: 800;
+  letter-spacing: -.025em;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  right: .25rem;
+  color: var(--accent);
+  font-size: 1.6rem;
+  font-weight: 500;
+  transform: translateY(-50%);
+}
+
+.faq-item[open] summary::after { content: "−"; }
+
+.faq-answer {
+  max-width: 50rem;
+  padding: 0 3rem 1.6rem 0;
+  color: var(--muted);
+}
+
+.faq-answer p { margin-bottom: .8rem; }
+.faq-answer p:last-child { margin-bottom: 0; }
+.faq-answer a { color: var(--text); text-decoration-color: var(--accent); text-underline-offset: .2em; }
+.faq-answer a:hover { color: var(--accent-strong); }
+
+.faq-note {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.faq-note strong { color: var(--text); }
 
 .hero {
   padding: clamp(2.5rem, 7vw, 6rem) 0 clamp(4.5rem, 10vw, 8rem);

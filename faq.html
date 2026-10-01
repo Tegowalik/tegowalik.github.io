@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c0d0f">
+  <meta name="description" content="Answers to common questions about Tegowalik LEGO railway layouts, track planning, switch automation, and long trains.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FAQ — Tegowalik">
+  <meta property="og:description" content="How Tegowalik plans, builds, and automates large LEGO railway layouts.">
+  <meta property="og:image" content="assets/share-card.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FAQ — Tegowalik">
+  <meta name="twitter:description" content="How Tegowalik plans, builds, and automates large LEGO railway layouts.">
+  <meta name="twitter:image" content="assets/share-card.jpg">
+  <title>FAQ — Tegowalik</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png" sizes="64x64">
+  <link rel="icon" href="assets/favicon-512.png" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" sizes="180x180">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What do the colored tiles on the track mean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The colors mainly identify track geometry, including standard and double straights and curve radii such as R40, R56, R72, R88, and R104. Some colors were historically also used to show who owned each piece, so the system is not perfectly consistent."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I visit one of the large train track setups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Unfortunately not. The layouts are temporary builds in private spaces. They usually exist for only a few days before being dismantled."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you plan these gigantic LEGO train track setups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The layouts are planned with BlueBrick, a free LEGO layout editor. BlueBrick shows the track plan in two dimensions, so multi-level routing, bridge heights, and clearances still require strong spatial thinking and planning beyond the software."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you automate your switches?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Switches are automated with LEGO Powered Up or MINDSTORMS hardware, sensors, motors, and Pybricks code. The LEGO Switch Controller repository contains the code and examples."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you run such long trains with so many wagons?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Long trains use two Powered Up motors controlled together from one City Hub. The Pybricks Train Controller repository contains the code and setup guide."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="wordmark" href="index.html" aria-label="Tegowalik home">
+      <img class="brand-logo" src="assets/logo-256.webp" width="42" height="42" alt="">
+      <span>Tegowalik</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a class="nav-link" href="faq.html" aria-current="page">FAQ</a>
+      <a class="header-cta" href="index.html#connect">Connect</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="faq-hero" aria-labelledby="faq-title">
+      <p class="eyebrow">Frequently asked questions</p>
+      <h1 id="faq-title"><span class="muted">Behind the tracks.</span><br>How it all works.</h1>
+      <p class="faq-intro">Quick answers about the colored track markers, temporary layouts, planning, switch automation, and the motors behind our longest trains.</p>
+    </section>
+
+    <section class="faq-section" aria-label="Questions and answers">
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>What do the colored tiles on the track mean?</summary>
+          <div class="faq-answer">
+            <p>They mainly identify the track geometry: standard straights, double straights, and curve radii such as R40, R56, R72, R88, and R104.</p>
+            <p>Historically, some colors also showed which track belonged to which person. That older system is still mixed in, so the colors are useful—but not a perfectly clean one-to-one code.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can I visit one of the large train track setups?</summary>
+          <div class="faq-answer">
+            <p>Unfortunately not. These are temporary builds in private spaces, usually assembled for only a few days and then completely dismantled. The best way to experience them is through the full setup videos and behind-the-scenes posts.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do you plan these gigantic LEGO train track setups?</summary>
+          <div class="faq-answer">
+            <p>I use <a href="https://bluebrick.lswproject.com/homepage.html" target="_blank" rel="noopener noreferrer">BlueBrick</a>, a free LEGO layout editor, to plan the track network.</p>
+            <p>BlueBrick shows the layout in two dimensions. Multi-level routing, bridge heights, slopes, and clearances therefore still require a lot of spatial thinking—and some planning beyond what the software can display.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do you automate your switches?</summary>
+          <div class="faq-answer">
+            <p>The switches use LEGO Powered Up or MINDSTORMS hardware, motors, sensors, and Pybricks code. The open-source <a href="https://github.com/Tegowalik/LEGO-Switch-Controller" target="_blank" rel="noopener noreferrer">LEGO Switch Controller</a> repository includes the code and practical examples.</p>
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do you run such long trains with so many wagons?</summary>
+          <div class="faq-answer">
+            <p>We use two Powered Up train motors controlled together from one City Hub. The <a href="https://github.com/Tegowalik/Pybricks-Train-Controller" target="_blank" rel="noopener noreferrer">Pybricks Train Controller</a> repository contains the code and setup guide.</p>
+          </div>
+        </details>
+      </div>
+
+      <p class="faq-note"><strong>Still curious?</strong> More detailed building guides, layout statistics, and a complete train gallery are planned for future updates.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><img class="brand-logo" src="assets/logo-256.webp" width="42" height="42" alt=""><span>Tegowalik</span></div>
+    <p>LEGO® is a trademark of the LEGO Group, which does not sponsor, authorize, or endorse this site.</p>
+    <p>© 2026 Tegowalik</p>
+  </footer>
+</body>
+</html>
